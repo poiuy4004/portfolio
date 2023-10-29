@@ -21,6 +21,7 @@ function Main(){
   const canvasRef = useRef(null);
 
   useEffect(()=>{
+    alert("현재 보시는 사이트는 크롬(Chrome)브라우저의\nPC버전에서 사용하시기를 권장합니다.")
     let canvas = canvasRef.current;
     canvas.width = window.innerWidth*0.98;
     canvas.height = window.innerHeight*0.8;
@@ -33,20 +34,28 @@ function Main(){
       dragon.drawImage(dragonImage,50,y,250,250)
     }
     function dragonMove(eventKey){
-      if(eventKey==="s"&&y<canvas.height*0.7){
+      if(eventKey==="s"&&y<canvas.height*0.59){
         y=y+0.05
       }
-      else if(eventKey==="w"&&50<y){
+      else if(eventKey==="w"&&y>50){
         y=y-0.05
       }
     }
 
     let map = canvas.getContext("2d")
+    let x = 0
     function drawMap(){
       map.fillStyle="rgba(255, 255, 255, 0)"
-      map.fillRect(0,0,window.innerWidth*0.98,window.innerHeight*0.8)
+      map.fillRect(x,0,window.innerWidth*0.98*5,window.innerHeight*0.8)
     }
-
+    function mapMove(eventKey){
+      if(eventKey==="a"&&x>0){
+        x=x-0.05
+      }
+      else if(eventKey==="d"&&x<window.innerWidth*0.98*5){
+        x=x+0.05
+      }
+    }
 
 
     function animationStart(){
@@ -56,6 +65,7 @@ function Main(){
 
       window.addEventListener("keydown",e=>{
         dragonMove(e.key)
+        mapMove(e.key)
       });
       drawDragon();
       drawMap();
