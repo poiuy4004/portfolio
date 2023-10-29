@@ -11,8 +11,7 @@ const Container = styled.main`
   position: fixed;
   top: 10%; bottom: 10%; left: 1%; right: 1%;
   width: 98%; height: 80%;
-  /* background-color: white; */
-  background: center / contain no-repeat url(${backgroundJpg});
+  background-image: url(${backgroundJpg});
 `
 const GameContainer = styled.canvas`
 
@@ -26,19 +25,14 @@ function Main(){
     canvas.width = window.innerWidth*0.98;
     canvas.height = window.innerHeight*0.8;
 
-    let context = canvas.getContext("2d");
-
+    let dragon = canvas.getContext("2d");
     let dragonImage = new Image();
     dragonImage.src=dragonPng;
-
-    let x = 500;
     let y = 50;
-
     function drawDragon(){
-      context.drawImage(dragonImage,50,y,250,250)
+      dragon.drawImage(dragonImage,50,y,250,250)
     }
-
-    function move(eventKey){
+    function dragonMove(eventKey){
       if(eventKey==="s"&&y<canvas.height*0.7){
         y=y+0.05
       }
@@ -47,19 +41,25 @@ function Main(){
       }
     }
 
+    let map = canvas.getContext("2d")
+    function drawMap(){
+      map.fillStyle="rgba(255, 255, 255, 0)"
+      map.fillRect(0,0,window.innerWidth*0.98,window.innerHeight*0.8)
+    }
+
+
+
     function animationStart(){
       requestAnimationFrame(animationStart);
 
-      context.clearRect(0, 0, canvas.width, canvas.height);
+      dragon.clearRect(0, 0, canvas.width, canvas.height);
 
       window.addEventListener("keydown",e=>{
-        move(e.key)
+        dragonMove(e.key)
       });
-
       drawDragon();
-
+      drawMap();
     }
-
     animationStart();
   },[])
 
