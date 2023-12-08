@@ -1,10 +1,6 @@
 
 import { createGlobalStyle } from 'styled-components';
 
-import Header from "./layout/Header";
-import Main from "./layout/Main";
-import Footer from "./layout/Footer";
-
 const GlobalStyle = createGlobalStyle`
   html{
     scroll-behavior: smooth;
@@ -32,9 +28,6 @@ function App() {
   return (
     <>
     <GlobalStyle />
-    <Header />
-    <Main />
-    <Footer />
     </>
   );
 }
