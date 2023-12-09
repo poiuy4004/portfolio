@@ -1,3 +1,4 @@
+import SnowBackground from './components/SnowBackground';
 
 import { createGlobalStyle } from 'styled-components';
 
@@ -5,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
   html{
     scroll-behavior: smooth;
     cursor: url(../public/favicon.ico), auto;
+    background-color: black;
   }
   *{
     -webkit-box-sizing: border-box;
@@ -18,16 +20,13 @@ const GlobalStyle = createGlobalStyle`
     color: black;
     text-decoration: none
   }
-  #root{
-    position: fixed;
-    background-color: rgb(255, 155, 41);
-  }
 `
 
 function App() {
   return (
     <>
     <GlobalStyle />
+    <SnowBackground />
     </>
   );
 }
