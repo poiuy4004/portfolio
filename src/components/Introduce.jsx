@@ -84,7 +84,7 @@ const IconContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-top: 12%;
+  margin-top: 2em;
   &>*{
     display: flex;
     justify-content: center;
