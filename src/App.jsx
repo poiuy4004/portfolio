@@ -1,12 +1,17 @@
 import SnowBackground from './components/SnowBackground';
+import Introduce from './components/Introduce';
 
-import { createGlobalStyle } from 'styled-components';
+import { useState } from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   html{
     scroll-behavior: smooth;
     cursor: url(../public/favicon.ico), auto;
-    background-color: black;
+    background-color: #2b2d2f;
+  }
+  #root{
+
   }
   *{
     -webkit-box-sizing: border-box;
@@ -21,12 +26,32 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none
   }
 `
+const Container = styled.main`
+  position: fixed;
+  top: 3%; left: 3%;
+  height: 94%; width: 94%;
+  color: white;
+`
+
+const IntroduceContainer = styled.section`
+  height: 100%; width: 100%;
+`
 
 function App() {
+  const [page,setPage] = useState(0)
   return (
     <>
     <GlobalStyle />
-    <SnowBackground />
+    
+    <Container>
+      <SnowBackground />
+      <article style={{height: '100%', width: '100%',}}>
+        <IntroduceContainer>
+          <Introduce />
+        </IntroduceContainer>
+      </article>
+    </Container>
+    
     </>
   );
 }
