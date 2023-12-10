@@ -1,7 +1,9 @@
 import SnowBackground from './components/SnowBackground';
-import Introduce from './components/Introduce';
+import Intro from './pages/Intro';
+import Introduce from './pages/Introduce';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
@@ -14,11 +16,9 @@ const GlobalStyle = createGlobalStyle`
 
   }
   *{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: 'Karla', sans-serif
   }
   a{
@@ -33,22 +33,32 @@ const Container = styled.main`
   color: white;
 `
 
-const IntroduceContainer = styled.section`
-  height: 100%; width: 100%;
-`
-
 function App() {
-  const [page,setPage] = useState(0)
+  const navigate = useNavigate()
+  const [page,setPage] = useState(null);
+  useEffect(()=>{
+    window.addEventListener('mousewheel',e=>{
+      e.deltaY>0
+      ? setPage(true)
+      : setPage(false)
+    })
+    page
+    ? navigate("/introduce")
+    : navigate("/")
+    setTimeout(()=>setPage(null),5000)
+  },[page])
   return (
     <>
+
     <GlobalStyle />
-    
+
     <Container>
       <SnowBackground />
       <article style={{height: '100%', width: '100%',}}>
-        <IntroduceContainer>
-          <Introduce />
-        </IntroduceContainer>
+        <Routes>
+          <Route path="/" element={<Intro />} />
+          <Route path="/introduce" element={<Introduce />} />
+        </Routes>
       </article>
     </Container>
     

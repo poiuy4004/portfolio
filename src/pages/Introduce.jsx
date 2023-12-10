@@ -1,11 +1,17 @@
 import styled from "styled-components";
 
-import { ReactComponent as Circle } from "../assets/Circle.svg";
+import Intro from "./Intro";
+import NextPageButton from "../components/NextPageButton";
 
+import Modal from "../components/Modal";
+
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+import { ReactComponent as Circle } from "../assets/Circle.svg";
 import KakaoTalkPng from "../assets/KakaoTalk.png";
 import { ReactComponent as KakaoTalk} from "../assets/KakaoTalk.svg";
 import { ReactComponent as GithubWhite} from "../assets/GithubWhite.svg";
-import { useState } from "react";
 
 const Container = styled.h1`
   height: 100%; width: 100%;
@@ -14,6 +20,10 @@ const Container = styled.h1`
   align-items: center;
   justify-content: center;
   font-size: 3em;
+  &>a{
+    width: 100%;
+    color: white;
+  }
 `
 const Name = styled.strong`
   color: orange;
@@ -125,7 +135,7 @@ const IconContainer = styled.div`
     animation: circleBorder 1s ease-in-out forwards, colorBlack 1s linear forwards;
   }
 
-  &>*>:last-child{
+  &>*>:nth-child(2){
     position: absolute;
     width: 1.5em;
     height: 1.5em;
@@ -134,71 +144,51 @@ const IconContainer = styled.div`
     font-weight: 400;
     text-align: center;
   }
-  &>:nth-child(2)>:last-child{
+  &>:nth-child(2)>:nth-child(2){
     fill: yellow;
     font-size: 0.4em;
   }
-  &>:nth-child(2):hover>:last-child{
+  &>:nth-child(2):hover>:nth-child(2){
     fill: black;
   }
 
-  &>:nth-child(5)>:last-child{
+  &>:nth-child(5)>:nth-child(2){
     margin: 0.2em 0 0 0.05em;
     width: auto; height: auto;
     fill: white;
   }
-  &>:nth-child(5):hover>:last-child{
+  &>:nth-child(5):hover>:nth-child(2){
     fill: black;
   }
 
   @keyframes threeBorder {
     0% {
-    stroke: #fff;
-    stroke-dasharray: 510;
-    stroke-width: 0.5rem;
+      stroke: #fff;
+      stroke-dasharray: 555;
+      stroke-width: 0.2em;
     }
     100% {
-    stroke: #fff;
-    stroke-dasharray: 83;
-    stroke-width: 0.5rem;
+      stroke: #fff;
+      stroke-dasharray: 84;
+      stroke-width: 0.2em;
     }
   }
   @keyframes circleBorder {
     100% {
-    stroke-dasharray: 510;
-    stroke-width: 0.5rem;
+      stroke-dasharray: 555;
+      stroke-width: 0.3em;
     }
   }
-
   @keyframes colorRed {100% {stroke: red;}}
   @keyframes colorYellow {100% {stroke: yellow;}}
-
   @keyframes colorBlue {100% {stroke: blue;}}
   @keyframes colorBlack {100% {stroke: black;}}
-
-  
   @keyframes colorGreen {100% {stroke: green;}}
-  @keyframes colorOrange {100% {stroke: orange;}}
-  
-  
-  
 `
 
 function Introduce(){
   const [isModal,setIsModal] = useState(false);
   const [isValue,setIsValue] = useState("");
-  function phoneNumber(){
-    setIsModal(true)
-    setIsValue("010-7184-2594")
-  }
-  function kakaoQR(){
-    setIsModal(true)
-    setIsValue("010-7184-2594")
-  }
-  function eMail(){
-    setIsModal(true)
-    setIsValue("010-7184-2594")
-  }
   return(
     <Container>
       <div>안녕하세요, <Name>장용민</Name> 입니다.</div>
@@ -207,37 +197,51 @@ function Introduce(){
         <div>Frontend Developer <strong>Portfolio</strong></div>
       </TypingText>
       <IconContainer>
-        <div onClick={()=>setIsValue("010-7184-2594")}>
+        <div onClick={()=>{
+          setIsValue("010-7184-2594")
+          setIsModal(true)
+        }}>
           <Circle />
           <div>
             <div>📞</div>
           </div>
         </div>
-        <div onClick={()=>setIsValue("010-7184-2594")}>
+        <div onClick={()=>{
+          setIsValue("010-7184-2594")
+          setIsModal(true)
+        }}>
           <Circle />
           <div>
             <div><KakaoTalk /></div>
           </div>
         </div>
-        <div onClick={()=>setIsValue("010-7184-2594")}>
+        <a
+          href="mailto:poiuy4004@naver.com" target="_blank" rel="noreferrer noopener"
+          onClick={()=>{
+          setIsValue("010-7184-2594")
+          setIsModal(true)
+        }}>
           <Circle />
           <div>
             <div>✉️</div>
           </div>
-        </div>
-        <a href="https://poiuy4004.github.io/" target="_blank">
+        </a>
+        <a href="https://poiuy4004.github.io/" target="_blank" rel="noreferrer noopener">
           <Circle />
           <div>
             <div>💻</div>
           </div>
         </a>
-        <a href="https://github.com/poiuy4004" target="_blank">
+        <a href="https://github.com/poiuy4004" target="_blank" rel="noreferrer noopener">
           <Circle />
           <div>
             <div><GithubWhite /></div>
           </div>
         </a>
       </IconContainer>
+      <Link to="/introduce"><NextPageButton /></Link>
+      <Modal />
+      {/* <Intro /> */}
     </Container>
   )
 }
