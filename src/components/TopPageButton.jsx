@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { ReactComponent as ArrowBottom } from "../assets/ArrowBottom.svg";
+import { ReactComponent as ArrowTop } from "../assets/ArrowTop.svg";
 
 const Container = styled.div`
   height: 2em; width: 2em;
@@ -13,8 +13,8 @@ const Container = styled.div`
   &:hover>:first-child{
     animation: beat .7s infinite;
     @keyframes beat {
-      0%{transform: scale(90%) translateY(-20%);}
-      100%{transform: scale(120%) translateY(10%);}
+      0%{transform: scale(90%) translateY(20%);}
+      100%{transform: scale(120%) translateY(-10%);}
     }
   }
   &>:last-child{
@@ -31,12 +31,12 @@ const Container = styled.div`
   }
 `
 
-function NextPageButton(){
+function TopPageButton(){
   return(
     <Container>
-      <ArrowBottom />
+      <ArrowTop />
       <div />
     </Container>
   )
 }
-export default NextPageButton;
+export default TopPageButton;

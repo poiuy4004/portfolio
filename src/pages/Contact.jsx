@@ -1,33 +1,31 @@
 import styled from "styled-components";
 
-import Intro from "./Intro";
-import NextPageButton from "../components/NextPageButton";
-
 import Modal from "../components/Modal";
 
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 
 import { ReactComponent as Circle } from "../assets/Circle.svg";
-import KakaoTalkPng from "../assets/KakaoTalk.png";
-import { ReactComponent as KakaoTalk} from "../assets/KakaoTalk.svg";
-import { ReactComponent as GithubWhite} from "../assets/GithubWhite.svg";
 
-const Container = styled.h1`
+import KakaoQRPng from "../assets/kakaoQR.png";
+import { ReactComponent as KakaoTalkSvg} from "../assets/KakaoTalk.svg";
+import KakaoTalk from "../components/KakaoTalk";
+import { ReactComponent as GithubWhiteSvg} from "../assets/GithubWhite.svg";
+
+const Container = styled.div`
   height: 100%; width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 3em;
-  &>a{
-    width: 100%;
-    color: white;
-  }
+  font-size: 6em;
+  font-weight: 700;
 `
 const Name = styled.strong`
-  color: orange;
-  text-shadow: 0.05em 0.05em 0.08em #ff073a;
+  color: transparent;
+  &.render{
+    animation: renderName 1s forwards;
+  }
+  @keyframes renderName {100%{color: rgb(238, 245, 255); -webkit-text-stroke: 1px rgb(162, 87, 114);}}
 `
 const TypingText = styled.div`
   display: flex;
@@ -53,38 +51,40 @@ const TypingText = styled.div`
     content: "Frontend Developer Portfolio";
     @keyframes typing {
       0%{content: "";}
-      2%{content: "F";}
-      4%{content: "Fr";}
-      6%{content: "Fro";}
-      8%{content: "Fron";}
-      10%{content: "Front";}
-      12%{content: "Fronte";}
-      14%{content: "Fronten";}
-      16%{content: "Frontend";}
-      18%{content: "Frontend ";}
-      20%{content: "Frontend D";}
-      22%{content: "Frontend De";}
-      24%{content: "Frontend Dev";}
-      26%{content: "Frontend Deve";}
-      28%{content: "Frontend Devel";}
-      30%{content: "Frontend Develo";}
-      32%{content: "Frontend Develop";}
-      34%{content: "Frontend Develope";}
-      36%{content: "Frontend Developer";}
-      38%{content: "Frontend Developer ";}
-      40%{content: "Frontend Developer P";}
-      42%{content: "Frontend Developer Po";}
-      44%{content: "Frontend Developer Por";}
-      46%{content: "Frontend Developer Port";}
-      48%{content: "Frontend Developer Portf";}
-      50%{content: "Frontend Developer Portfo";}
-      52%{content: "Frontend Developer Portfol";}
-      54%{content: "Frontend Developer Portfoli";}
-      56%{content: "Frontend Developer Portfolio";width: min-content;}
-      57%{content: "Frontend Developer Portfolio";width: 100%;}
-      77%{content: "Frontend Developer Portfolio";width: 100%;}
-      87%{content: "Frontend Developer Portfolio";width: 0%;}
-      88%{content: "";width: min-content;}
+      1%{content: "F";}
+      2%{content: "Fr";}
+      3%{content: "Fro";}
+      4%{content: "Fron";}
+      5%{content: "Front";}
+      6%{content: "Fronte";}
+      7%{content: "Fronten";}
+      8%{content: "Frontend";}
+      9%{content: "Frontend ";}
+      10%{content: "Frontend D";}
+      11%{content: "Frontend De";}
+      12%{content: "Frontend Dev";}
+      13%{content: "Frontend Deve";}
+      14%{content: "Frontend Devel";}
+      15%{content: "Frontend Develo";}
+      16%{content: "Frontend Develop";}
+      17%{content: "Frontend Develope";}
+      18%{content: "Frontend Developer";}
+      19%{content: "Frontend Developer ";}
+      20%{content: "Frontend Developer P";}
+      21%{content: "Frontend Developer Po";}
+      22%{content: "Frontend Developer Por";}
+      23%{content: "Frontend Developer Port";}
+      24%{content: "Frontend Developer Portf";}
+      25%{content: "Frontend Developer Portfo";}
+      26%{content: "Frontend Developer Portfol";}
+      27%{content: "Frontend Developer Portfoli";}
+      28%{content: "Frontend Developer Portfolio";width: min-content;border-right: 0.08em solid rgb(102, 102, 102);}
+      33%{content: "Frontend Developer Portfolio";width: min-content;border-right: 0.08em solid rgb(102, 102, 102);}
+      34%{content: "Frontend Developer Portfolio";width: 100%;border:none;}
+      70%{content: "Frontend Developer Portfolio";width: 100%;border:none;}
+      71%{content: "Frontend Developer Portfolio";width: 100%;border-right: 0.08em solid rgb(102, 102, 102);}
+      80%{content: "Frontend Developer Portfolio";width: 0%;}
+      81%{content: "";width: min-content;}
       100%{content: "";width: min-content;}
     }
   }
@@ -111,12 +111,12 @@ const IconContainer = styled.div`
     height: 1.5em;
     animation: threeBorder 1s ease-in-out forwards;
     fill: none;
-    stroke-dasharray: 40;
+    stroke-dasharray: 37;
     transition: all .2s ease-in-out;
   }
   &>*:hover>:first-child{
     fill: #fff;
-    stroke-width: 2em;
+    stroke-width: 0.5em;
     transition: all .2s ease-in-out;
   }
   &>:nth-child(1):hover>:first-child{
@@ -170,13 +170,13 @@ const IconContainer = styled.div`
     100% {
       stroke: #fff;
       stroke-dasharray: 84;
-      stroke-width: 0.2em;
+      stroke-width: 0.1em;
     }
   }
   @keyframes circleBorder {
     100% {
       stroke-dasharray: 555;
-      stroke-width: 0.3em;
+      stroke-width: 0.2em;
     }
   }
   @keyframes colorRed {100% {stroke: red;}}
@@ -186,41 +186,40 @@ const IconContainer = styled.div`
   @keyframes colorGreen {100% {stroke: green;}}
 `
 
-function Introduce(){
-  const [isModal,setIsModal] = useState(false);
+function Contact(){
+  const [isModalOpen,setIsModalOpen] = useState(false);
   const [isValue,setIsValue] = useState("");
+  const [isNameRender,setIsNameRender] = useState(false);
+  const iconContainerRef = useRef();
+  useEffect(()=>{
+    observer.observe(iconContainerRef.current)
+  })
+  function nameRenderHandler(entries){
+    setIsNameRender(entries[0].isIntersecting)
+  }
+  const observer = new IntersectionObserver(nameRenderHandler,{threshold: 1.0,})
+
   return(
     <Container>
-      <div>안녕하세요, <Name>장용민</Name> 입니다.</div>
+      <div><Name className={isNameRender? "render": null}>장용민</Name></div>
       <TypingText>
         <div>Frontend Developer <strong>Portfolio</strong></div>
         <div>Frontend Developer <strong>Portfolio</strong></div>
       </TypingText>
-      <IconContainer>
-        <div onClick={()=>{
-          setIsValue("010-7184-2594")
-          setIsModal(true)
-        }}>
+      <IconContainer ref={iconContainerRef}>
+        <a href="tel:010-7184-2594" target="_blank" rel="noreferrer noopener">
           <Circle />
           <div>
             <div>📞</div>
           </div>
-        </div>
-        <div onClick={()=>{
-          setIsValue("010-7184-2594")
-          setIsModal(true)
-        }}>
+        </a>
+        <div onClick={()=>{setIsModalOpen(true)}}>
           <Circle />
           <div>
-            <div><KakaoTalk /></div>
+            <div><KakaoTalkSvg /></div>
           </div>
         </div>
-        <a
-          href="mailto:poiuy4004@naver.com" target="_blank" rel="noreferrer noopener"
-          onClick={()=>{
-          setIsValue("010-7184-2594")
-          setIsModal(true)
-        }}>
+        <a href="mailto:poiuy4004@naver.com" target="_blank" rel="noreferrer noopener">
           <Circle />
           <div>
             <div>✉️</div>
@@ -235,14 +234,14 @@ function Introduce(){
         <a href="https://github.com/poiuy4004" target="_blank" rel="noreferrer noopener">
           <Circle />
           <div>
-            <div><GithubWhite /></div>
+            <div><GithubWhiteSvg /></div>
           </div>
         </a>
       </IconContainer>
-      <Link to="/introduce"><NextPageButton /></Link>
-      <Modal />
-      {/* <Intro /> */}
+      {isModalOpen
+      ? <Modal setIsModalOpen={setIsModalOpen} content={<KakaoTalk setIsModalOpen={setIsModalOpen} />}/>
+      : null}
     </Container>
   )
 }
-export default Introduce;
+export default Contact;

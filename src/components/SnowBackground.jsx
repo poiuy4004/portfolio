@@ -86,7 +86,7 @@ const Snow = styled.div`
 
 function SnowBackground(){
   return(
-    <div aria-hidden="true">
+    <div aria-hidden="true" style={{position: 'absolute',zIndex: '-999',}}>
       <Snow>❅</Snow>
       <Snow>❅</Snow>
       <Snow>❆</Snow>

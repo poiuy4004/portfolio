@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Container = styled.div`
-  position: absolute;
+const Box = styled.div`
+  z-index: 999;
+  position: fixed;
   height: 100%; width: 100%;
   display: flex;
   flex-direction: column;
@@ -76,20 +77,17 @@ function Intro(){
     setTimeout(()=>{
       setFadeOut(true)
       setTimeout(()=>{
-        navigate('/introduce')
         setHide(true)
       },1000)
     },1500)
   },[])
 
   return(
-    <Container className={hide? "hide" : null}>
-
+    <Box className={hide? "hide" : null}>
       <TextContainer>
         <h1></h1>
         <h1></h1>
       </TextContainer>
-
       <BorderContainer className={fadeOut? "fadeOut" : null}>
         <div></div>
         <div></div>
@@ -97,8 +95,7 @@ function Intro(){
         <div></div>
         <span>by.YongMin</span>
       </BorderContainer>
-
-    </Container>
+    </Box>
   )
 }
 export default Intro;
