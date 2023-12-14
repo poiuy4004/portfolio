@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 function Project(){
     return(
-      <div>PROJECT</div>
+      <section>PROJECT</section>
     )
   }
   export default Project;

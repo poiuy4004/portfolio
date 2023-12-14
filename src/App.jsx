@@ -24,13 +24,13 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Karla', sans-serif
   }
-  a{
-    text-decoration: none
-  }
+  a{text-decoration: none}
+  article>section{height: 100%; width: 100%;}
 `
 const Container = styled.main`
-  height: 100%; width: 100%;
+  /* height: 100%; width: 100%; */
 `
+
 const TopPageButtonBox = styled.a`
   display: ${props=>props.renderTopPageButton? "block" : "none"};
   position: fixed;
@@ -45,14 +45,6 @@ function App() {
   const [renderTopPageButton,setRenderTopPageButton] = useState(false);
   const skillStackRef = useRef();
   useEffect(()=>{
-    window.addEventListener('wheel',e=>{
-      e.preventDefault();
-      e.deltaY>0
-      ? isPage<2+projects.length? setIsPage(isPage+1) : setIsPage(2+projects.length)
-      : isPage-1<0? setIsPage(0) : setIsPage(isPage-1)
-    },{passive : false});
-    window.scrollTo({ top: windowHeight*isPage, behavior: 'smooth' })
-
     function topPageButtonRenderHandler(entries){
       setRenderTopPageButton(entries[0].isIntersecting)
     }
@@ -62,30 +54,37 @@ function App() {
   },[isPage])
   
   return (
-    <>
+    <div
+      onWheel={e=>{
+        e.deltaY>0
+        ? isPage<2+projects.length? setIsPage(isPage+1) : setIsPage(2+projects.length)
+        : isPage-1<0? setIsPage(0) : setIsPage(isPage-1)
+        window.scrollTo({top: windowHeight*isPage, behavior: 'smooth'})
+      }}
+    >
     <GlobalStyle />
     <SnowBackground />
     <Container>
       <Intro />
-      <section id='profile' style={{height: windowHeight, width: windowWidth,}}>
+      <article id='profile' style={{height: windowHeight, width: windowWidth,}}>
         <Profile />
-      </section>
+      </article>
       <div ref={skillStackRef}>
-        <section style={{height: windowHeight, width: windowWidth,}}>
+        <article style={{height: windowHeight, width: windowWidth,}}>
           <SkillStack />
-        </section>
+        </article>
         {projects.map((project)=>(
-          <section style={{height: windowHeight, width: windowWidth,}}>
+          <article style={{height: windowHeight, width: windowWidth,}}>
             <Project project />
-          </section>
+          </article>
         ))}
-        <section style={{height: windowHeight, width: windowWidth,}}>
+        <article style={{height: windowHeight, width: windowWidth,}}>
           <Contact />
-        </section>
+        </article>
       </div>
       <TopPageButtonBox href='#profile' onClick={()=>setIsPage(0)} renderTopPageButton={renderTopPageButton}><TopPageButton /></TopPageButtonBox>
     </Container>
-    </>
+    </div>
   );
 }
 export default App;

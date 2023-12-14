@@ -1,46 +1,45 @@
 import styled from "styled-components";
 
-const Container = styled.div`
-  height: 100%; width: 100%;
+const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #2b2d2f;
-  transition: color 10s ease-in-out;
+  font-size: 32px;
   &>*{position: absolute;}
-  &>:nth-child(2){top: 34%; left: 63%;}
-  &>:nth-child(3){top: 91%; left: 20%; animation: cloudText 30s forwards;}
-  &>:nth-child(4){top: 54%; left: 90%;}
-  &>:nth-child(5){top: 25%; left: 53%;}
-  &>:nth-child(6){top: 18%; left: 89%;}
-  &>:nth-child(7){top: 75%; left: 40%; animation: cloudText 30s forwards;}
-  &>:nth-child(8){top: 33%; left: 4%; animation: cloudText 30s forwards;}
-  &>:nth-child(9){top: 62%; left: 20%;}
-  &>:nth-child(10){top: 37%; left: 27%;}
-  &>:nth-child(11){top: 6%; left: 70%;}
-  &>:nth-child(12){top: 84%; left: 84%;}
-  &>:nth-child(13){top: 3%; left: 14%;}
-  @keyframes cloudText {100%{color: gray;}}
+  &>:nth-child(2){top: 91%; left: 20%; animation:}
+  &>:nth-child(3){top: 34%; left: 63%; animation: cloudText 5s ease-in forwards;}
+  &>:nth-child(4){top: 54%; left: 90%; animation:}
+  &>:nth-child(5){top: 75%; left: 40%; animation:}
+  &>:nth-child(6){top: 18%; left: 89%; animation:}
+  &>:nth-child(7){top: 25%; left: 53%; animation: cloudText 5s ease-in forwards;}
+  &>:nth-child(8){top: 33%; left: 4%; animation: cloudText 5s ease-in forwards;}
+  &>:nth-child(9){top: 62%; left: 20%; animation:}
+  &>:nth-child(10){top: 37%; left: 27%; animation:}
+  &>:nth-child(11){top: 6%; left: 70%; animation:}
+  &>:nth-child(12){top: 84%; left: 84%; animation:}
+  &>:nth-child(13){top: 3%; left: 14%; animation:}
+  @keyframes cloudText {100%{font-size: 10px; color: gray;}}
 `
 const Name = styled.h1`
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: xxx-large;;
+  font-size: 77px;
   &>:first-child{
-    margin-right: 0.1em;
-    animation: moveToLeft 1s infinite;
-    @keyframes moveToLeft {50%{transform: translateX(-50%) scale(150%); margin-right: 2em;}}
+    margin-right: 20px;
+    animation: moveToLeft 1.2s infinite;
+    @keyframes moveToLeft {50%{transform: translateX(-55px) scale(140%); margin-right: 55px;}}
   }
   &>strong{
-    animation: scaleUp 1s infinite;
-    @keyframes scaleUp {50%{transform: scale(200%)}}
+    animation: scaleUp 1.2s infinite;
+    @keyframes scaleUp {50%{transform: scale(140%)}}
   }
   &>:last-child{
-    margin-left: 0.1em;
-    animation: moveToRight 1s infinite;
-    @keyframes moveToRight {50%{transform: translateX(50%) scale(150%); margin-left: 2em;}}
+    margin-left: 10px;
+    animation: moveToRight 1.2s infinite;
+    @keyframes moveToRight {50%{transform: translateX(55px) scale(140%); margin-left: 50px;}}
   }
 `
 

@@ -10,12 +10,6 @@ const Container = styled.article`
   align-items: center;
   background-color: rgba(0,0,0,0.3);
 `
-// const Box = styled.div`
-//   height: 80%; width: 80%;
-//   background-color: black;
-//   border-radius: 50px;
-// `
-
 
 function Modal({setIsModalOpen,content}){
 
@@ -23,9 +17,7 @@ function Modal({setIsModalOpen,content}){
     <>
     {createPortal(
       <Container onClick={()=>setIsModalOpen(false)}>
-        {/* <Box onClick={e=>e.stopPropagation()}> */}
           {content}
-        {/* </Box> */}
       </Container>,
       document.body
     )}
