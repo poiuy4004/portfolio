@@ -21,9 +21,9 @@ const Container = styled.section`
 const Name = styled.strong`
   color: transparent;
   &.render{
-    animation: renderName 1s forwards;
+    animation: renderName 3s forwards;
   }
-  @keyframes renderName {100%{color: rgb(238, 245, 255); -webkit-text-stroke: 1px rgb(162, 87, 114);}}
+  @keyframes renderName {100%{color: rgb(255,255,255); text-shadow: 5px 3px 0 rgba(255,127,0,0.3);}}
 `
 const TypingText = styled.div`
   display: flex;

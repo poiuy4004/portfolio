@@ -51,7 +51,7 @@ function App() {
     const observer = new IntersectionObserver(topPageButtonRenderHandler,{threshold: 0.1,})
     observer.observe(skillStackRef.current)
     return()=>observer.disconnect();
-  },[isPage])
+  },[])
   
   return (
     <div
@@ -71,7 +71,7 @@ function App() {
       </article>
       <div ref={skillStackRef}>
         <article style={{height: windowHeight, width: windowWidth,}}>
-          <SkillStack />
+          <SkillStack renderTopPageButton={renderTopPageButton} />
         </article>
         {projects.map((project)=>(
           <article style={{height: windowHeight, width: windowWidth,}}>
