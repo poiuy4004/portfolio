@@ -13,7 +13,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
   html{
     scroll-behavior: smooth;
-    cursor: url(../public/favicon.ico), auto;
+    cursor: url(../public/cursor.ico), auto;
     color: white;
     background-color: #2b2d2f;
     overflow: hidden;
