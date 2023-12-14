@@ -177,7 +177,6 @@ const IconContainer = styled.div`
 
 function Contact(){
   const [isModalOpen,setIsModalOpen] = useState(false);
-  const [isValue,setIsValue] = useState("");
   const [isNameRender,setIsNameRender] = useState(false);
   const iconContainerRef = useRef();
   useEffect(()=>{
