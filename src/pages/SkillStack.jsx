@@ -7,8 +7,8 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   color: black;
-  /* &>div{padding-top: 147px; opacity: 0;}
-  &>div:nth-of-type(1){opacity: 0; animation: ${props=>props.renderTopPageButton? "renderOne 3s ease-in forwards;" : null}}
+  &>div{padding-top: 147px;}
+  /* &>div:nth-of-type(1){opacity: 0; animation: ${props=>props.renderTopPageButton? "renderOne 3s ease-in forwards;" : null}}
   &>div:nth-of-type(2){opacity: 0; animation: ${props=>props.renderTopPageButton? "renderTwo 3s ease-in forwards;" : null}}
   &>div:nth-of-type(3){opacity: 0; animation: ${props=>props.renderTopPageButton? "renderThree 3s ease-in forwards;" : null}}
   &>div:nth-of-type(4){opacity: 0; animation: ${props=>props.renderTopPageButton? "renderFour 3s ease-in forwards;" : null}}
