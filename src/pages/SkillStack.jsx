@@ -8,14 +8,14 @@ const Container = styled.section`
   justify-content: center;
   color: black;
   &>div{padding-top: 147px;}
-  /* &>div:nth-of-type(1){opacity: 0; animation: ${props=>props.renderTopPageButton? "renderOne 3s ease-in forwards;" : null}}
+  &>div:nth-of-type(1){opacity: 0; animation: ${props=>props.renderTopPageButton? "renderOne 3s ease-in forwards;" : null}}
   &>div:nth-of-type(2){opacity: 0; animation: ${props=>props.renderTopPageButton? "renderTwo 3s ease-in forwards;" : null}}
   &>div:nth-of-type(3){opacity: 0; animation: ${props=>props.renderTopPageButton? "renderThree 3s ease-in forwards;" : null}}
   &>div:nth-of-type(4){opacity: 0; animation: ${props=>props.renderTopPageButton? "renderFour 3s ease-in forwards;" : null}}
   @keyframes renderOne {25%{opacity: 1;} 100%{opacity: 1;}}
   @keyframes renderTwo {50%{opacity: 1;} 100%{opacity: 1;}}
   @keyframes renderThree {75%{opacity: 1;} 100%{opacity: 1;}}
-  @keyframes renderFour {100%{opacity: 1;}} */
+  @keyframes renderFour {100%{opacity: 1;}}
 `
 const Title = styled.h1`
   position: absolute;
@@ -44,9 +44,9 @@ const Skill = styled.div`
   &>text{font-size: xxx-large;}
 `
 
-function SkillStack(){
+function SkillStack({renderTopPageButton}){
   return(
-    <Container>
+    <Container renderTopPageButton={renderTopPageButton}>
       <Title>Skill</Title>
       <div>
         <Box>

@@ -71,7 +71,7 @@ function App() {
       </article>
       <div ref={skillStackRef}>
         <article style={{height: windowHeight, width: windowWidth,}}>
-          <SkillStack />
+          <SkillStack renderTopPageButton={renderTopPageButton} />
         </article>
         {projects.map((project)=>(
           <article style={{height: windowHeight, width: windowWidth,}}>
