@@ -75,7 +75,7 @@ function App() {
         </article>
         {projects.map((project)=>(
           <article style={{height: windowHeight, width: windowWidth,}}>
-            <Project project />
+            <Project project={project} />
           </article>
         ))}
         <article style={{height: windowHeight, width: windowWidth,}}>

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-function Project(){
+function Project({project}){
     return(
-      <section>PROJECT</section>
+      <section>{project.title}</section>
     )
   }
   export default Project;
