@@ -4,7 +4,7 @@ import styled from "styled-components";
 import kakaoQRPng from "../assets/kakaoQR.png";
 
 const Container = styled.section`
-  height: ${20*45}px; width: ${10*45}px; // 900 450
+  height: ${20*45}px; width: ${10*45}px;
   background-color: black;
   border-radius: 10px;
   display: flex;
@@ -12,8 +12,11 @@ const Container = styled.section`
   justify-content: space-between;
   background: center no-repeat url("https://png.pngtree.com/thumb_back/fh260/background/20230316/pngtree-heaven-gate-ladder-background-image_1948845.jpg");
   background-color: gray;
-  &>span{position: absolute; top: 100px; display: flex; flex-direction: column;}
-  &>span>button{margin: 10px 100px; padding: 7px; font-weight: 700; cursor: pointer;}
+  &>span{position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+  &>span>img{margin: 80px 30px 20px; height: 390px; width: 390px;}
+  &>span>button{padding: 10px 20px; font-size: 30px; font-weight: 700; background-color: white; border: none; border-radius: 10px;  cursor: pointer;}
+  &>span>button:hover{background-color: ivory; color: gray; border: none; border-radius: 10px;}
+  &>span>button:active{background-color: gray; color: white; border: none; border-radius: 10px;}
   & a{color: white;}
 `
 const Header = styled.div`

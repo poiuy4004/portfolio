@@ -6,13 +6,11 @@ import { useEffect, useRef, useState } from "react";
 
 import { ReactComponent as Circle } from "../assets/Circle.svg";
 
-import KakaoQRPng from "../assets/kakaoQR.png";
 import { ReactComponent as KakaoTalkSvg} from "../assets/KakaoTalk.svg";
 import KakaoTalk from "../components/KakaoTalk";
 import { ReactComponent as GithubWhiteSvg} from "../assets/GithubWhite.svg";
 
-const Container = styled.div`
-  height: 100%; width: 100%;
+const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,9 +21,9 @@ const Container = styled.div`
 const Name = styled.strong`
   color: transparent;
   &.render{
-    animation: renderName 1s forwards;
+    animation: renderName 3s forwards;
   }
-  @keyframes renderName {100%{color: rgb(238, 245, 255); -webkit-text-stroke: 1px rgb(162, 87, 114);}}
+  @keyframes renderName {100%{color: rgb(255,255,255); text-shadow: 5px 3px 0 rgba(255,127,0,0.3);}}
 `
 const TypingText = styled.div`
   display: flex;
@@ -47,7 +45,7 @@ const TypingText = styled.div`
     overflow: hidden;
     border-right: 0.08em solid rgb(102, 102, 102);
     text-align: left;
-    animation: typing 5s infinite;
+    animation: typing 3s infinite;
     content: "Frontend Developer Portfolio";
     @keyframes typing {
       0%{content: "";}
@@ -69,23 +67,14 @@ const TypingText = styled.div`
       16%{content: "Frontend Develop";}
       17%{content: "Frontend Develope";}
       18%{content: "Frontend Developer";}
-      19%{content: "Frontend Developer ";}
-      20%{content: "Frontend Developer P";}
-      21%{content: "Frontend Developer Po";}
-      22%{content: "Frontend Developer Por";}
-      23%{content: "Frontend Developer Port";}
-      24%{content: "Frontend Developer Portf";}
-      25%{content: "Frontend Developer Portfo";}
-      26%{content: "Frontend Developer Portfol";}
-      27%{content: "Frontend Developer Portfoli";}
-      28%{content: "Frontend Developer Portfolio";width: min-content;border-right: 0.08em solid rgb(102, 102, 102);}
-      33%{content: "Frontend Developer Portfolio";width: min-content;border-right: 0.08em solid rgb(102, 102, 102);}
-      34%{content: "Frontend Developer Portfolio";width: 100%;border:none;}
-      70%{content: "Frontend Developer Portfolio";width: 100%;border:none;}
-      71%{content: "Frontend Developer Portfolio";width: 100%;border-right: 0.08em solid rgb(102, 102, 102);}
-      80%{content: "Frontend Developer Portfolio";width: 0%;}
-      81%{content: "";width: min-content;}
-      100%{content: "";width: min-content;}
+      28%{content: "Frontend Developer"; width: min-content;border-right: 0.08em solid rgb(102, 102, 102);}
+      33%{content: "Frontend Developer"; width: min-content;border-right: 0.08em solid rgb(102, 102, 102);}
+      34%{content: "Frontend Developer"; width: 100%; border:none;}
+      70%{content: "Frontend Developer"; width: 100%; border:none;}
+      71%{content: "Frontend Developer"; width: 100%; border-right: 0.08em solid rgb(102, 102, 102);}
+      80%{content: "Frontend Developer"; width: 0%;}
+      81%{content: ""; width: min-content;}
+      100%{content: ""; width: min-content;}
     }
   }
 `
@@ -188,7 +177,6 @@ const IconContainer = styled.div`
 
 function Contact(){
   const [isModalOpen,setIsModalOpen] = useState(false);
-  const [isValue,setIsValue] = useState("");
   const [isNameRender,setIsNameRender] = useState(false);
   const iconContainerRef = useRef();
   useEffect(()=>{
@@ -203,8 +191,8 @@ function Contact(){
     <Container>
       <div><Name className={isNameRender? "render": null}>장용민</Name></div>
       <TypingText>
-        <div>Frontend Developer <strong>Portfolio</strong></div>
-        <div>Frontend Developer <strong>Portfolio</strong></div>
+        <div>Frontend Developer</div>
+        <div>Frontend Developer</div>
       </TypingText>
       <IconContainer ref={iconContainerRef}>
         <a href="tel:010-7184-2594" target="_blank" rel="noreferrer noopener">
