@@ -32,7 +32,7 @@ const skills = {
     {name: "Github", img: "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"},
     {name: "AWS", img: "https://seeklogo.com/images/A/amazon-web-services-aws-logo-6C2E3DCD3E-seeklogo.com.png"},
     {name: "Postman", img: "https://seeklogo.com/images/P/postman-logo-0087CA0D15-seeklogo.com.png"},
-    {name: "ERDCloud", img: "https://scontent-ssn1-1.xx.fbcdn.net/v/t39.30808-6/294554983_191685833213392_5252711164201118694_n.png?_nc_cat=111&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=RO6k6mI5NHAAX-Ic4R6&_nc_ht=scontent-ssn1-1.xx&oh=00_AfD1JHg-e05zQziEB4_q7cysMdHEPoLaHwt2ZYH7-1GvvA&oe=6580A868"},
+    {name: "ERDCloud", img: "https://scontent-ssn1-1.xx.fbcdn.net/v/t39.30808-6/294554983_191685833213392_5252711164201118694_n.png?_nc_cat=111&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=UwBdLhbtPMsAX9d2_if&_nc_ht=scontent-ssn1-1.xx&oh=00_AfCnPGzbMs89Q373sZkrsf00Ybe47v1KovjclE4KFO-mrQ&oe=65869728"},
     {name: "Swagger", img: "https://cdn.svgporn.com/logos/swagger.svg"},
   ]
 }

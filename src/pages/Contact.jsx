@@ -15,7 +15,7 @@ const Container = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 6em;
+  font-size: 6rem;
   font-weight: 700;
 `
 const Name = styled.strong`
@@ -23,7 +23,7 @@ const Name = styled.strong`
   &.render{
     animation: renderName 3s forwards;
   }
-  @keyframes renderName {100%{color: rgb(255,255,255); text-shadow: 5px 3px 0 rgba(255,127,0,0.3);}}
+  @keyframes renderName {100%{color: rgb(255,255,255); text-shadow: 0.25rem 0.25rem 0 rgba(255,127,0,0.3);}}
 `
 const TypingText = styled.div`
   display: flex;
@@ -43,7 +43,7 @@ const TypingText = styled.div`
     width: min-content;
     white-space: pre;
     overflow: hidden;
-    border-right: 0.08em solid rgb(102, 102, 102);
+    border-right: 0.8rem solid rgb(102, 102, 102);
     text-align: left;
     animation: typing 3s infinite;
     content: "Frontend Developer Portfolio";
@@ -67,11 +67,11 @@ const TypingText = styled.div`
       16%{content: "Frontend Develop";}
       17%{content: "Frontend Develope";}
       18%{content: "Frontend Developer";}
-      28%{content: "Frontend Developer"; width: min-content;border-right: 0.08em solid rgb(102, 102, 102);}
-      33%{content: "Frontend Developer"; width: min-content;border-right: 0.08em solid rgb(102, 102, 102);}
+      28%{content: "Frontend Developer"; width: min-content;border-right: 0.8rem solid rgb(102, 102, 102);}
+      33%{content: "Frontend Developer"; width: min-content;border-right: 0.8rem solid rgb(102, 102, 102);}
       34%{content: "Frontend Developer"; width: 100%; border:none;}
       70%{content: "Frontend Developer"; width: 100%; border:none;}
-      71%{content: "Frontend Developer"; width: 100%; border-right: 0.08em solid rgb(102, 102, 102);}
+      71%{content: "Frontend Developer"; width: 100%; border-right: 0.8rem solid rgb(102, 102, 102);}
       80%{content: "Frontend Developer"; width: 0%;}
       81%{content: ""; width: min-content;}
       100%{content: ""; width: min-content;}
@@ -81,23 +81,22 @@ const TypingText = styled.div`
 
 const IconContainer = styled.div`
   display: flex;
-  width: 100%;
   justify-content: center;
-  margin-top: 2em;
+  margin-top: 18rem;
   &>*{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1.5em;
-    height: 1.5em;
+    width: 7rem;
+    height: 7rem;
     margin: 0.2em;
     cursor: pointer;
   }
 
   &>*>:first-child{
     position: absolute;
-    width: 1.5em;
-    height: 1.5em;
+    width: 7rem;
+    height: 7rem;
     animation: threeBorder 1s ease-in-out forwards;
     fill: none;
     stroke-dasharray: 37;
@@ -105,7 +104,7 @@ const IconContainer = styled.div`
   }
   &>*:hover>:first-child{
     fill: #fff;
-    stroke-width: 0.5em;
+    stroke-width: 5rem;
     transition: all .2s ease-in-out;
   }
   &>:nth-child(1):hover>:first-child{
@@ -126,24 +125,33 @@ const IconContainer = styled.div`
 
   &>*>:nth-child(2){
     position: absolute;
-    width: 1.5em;
-    height: 1.5em;
+    width: 7rem;
+    height: 7rem;
     color: white;
-    font-size: 0.5em;
-    font-weight: 400;
-    text-align: center;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.3rem;
   }
   &>:nth-child(2)>:nth-child(2){
     fill: yellow;
-    font-size: 0.4em;
+    width: 7rem;
+    height: 7rem;
+    font-size: 1rem;
+    &>*{
+      width: 2.7rem;
+      height: 2.7rem;
+    }
   }
   &>:nth-child(2):hover>:nth-child(2){
     fill: black;
+    width: 7rem;
+    height: 7rem;
   }
 
   &>:nth-child(5)>:nth-child(2){
-    margin: 0.2em 0 0 0.05em;
-    width: auto; height: auto;
+    margin: 0.7rem 0 0 0.05rem;
     fill: white;
   }
   &>:nth-child(5):hover>:nth-child(2){
@@ -154,18 +162,18 @@ const IconContainer = styled.div`
     0% {
       stroke: #fff;
       stroke-dasharray: 555;
-      stroke-width: 0.2em;
+      stroke-width: 1rem;
     }
     100% {
       stroke: #fff;
       stroke-dasharray: 84;
-      stroke-width: 0.1em;
+      stroke-width: 1rem;
     }
   }
   @keyframes circleBorder {
     100% {
       stroke-dasharray: 555;
-      stroke-width: 0.2em;
+      stroke-width: 1rem;
     }
   }
   @keyframes colorRed {100% {stroke: red;}}

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { ReactComponent as ArrowBottom } from "../assets/ArrowBottom.svg";
 
 const Container = styled.div`
-  height: 2em; width: 2em;
+  height: 2rem; width: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,8 +25,8 @@ const Container = styled.div`
   &:hover>:last-child{
     animation: whiteOver 1s infinite;
     @keyframes whiteOver {
-      0%{background-color: rgba(255, 255, 255, 1);height: 0.01em; width: 0.01em;}
-      100%{background-color: rgba(255, 255, 255, 0.1);height: 2em; width: 2em;}
+      0%{background-color: rgba(255, 255, 255, 1);height: 0.01rem; width: 0.01rem;}
+      100%{background-color: rgba(255, 255, 255, 0.1);height: 2rem; width: 2rem;}
     }
   }
 `
