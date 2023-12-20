@@ -27,7 +27,7 @@ const Name = styled.strong`
   @keyframes renderName {100%{color: rgb(255,255,255); text-shadow: 0.25rem 0.25rem 0 rgba(255,127,0,0.3);}}
 `
 const TypingText = styled.div`
-  display: ${props=>props.isPage>5? "flex" : "none"};
+  display: ${props=>props.isPage>7? "flex" : "none"};
   flex-direction: column;
   justify-content: left;
   text-align: left;
@@ -186,7 +186,7 @@ function Contact({isPage}){
 
   return(
     <Container>
-      <div><Name className={isPage>5? "render": null}>장용민</Name></div>
+      <div><Name className={isPage>7? "render": null}>장용민</Name></div>
       <TypingText isPage={isPage}>
         <div>Frontend Developer</div>
       </TypingText>
