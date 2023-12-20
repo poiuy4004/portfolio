@@ -1,10 +1,12 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.c0348c0c.css",
-    "main.js": "/portfolio/static/js/main.92650db1.js",
+    "main.js": "/portfolio/static/js/main.8c60c917.js",
     "static/media/goldenCityMain.png": "/portfolio/static/media/goldenCityMain.150a78343ab45e642140.png",
+    "static/media/gemMain.png": "/portfolio/static/media/gemMain.bf0a275179a173e46b9a.png",
+    "static/media/nutritionCodersMain.png": "/portfolio/static/media/nutritionCodersMain.563025a73c28a74481f8.png",
     "static/media/stackOverflowMain.png": "/portfolio/static/media/stackOverflowMain.d3fe3a758204dd777522.png",
-    "static/media/nutritionCodersMain.png": "/portfolio/static/media/nutritionCodersMain.0084e4234608d3bde06a.png",
+    "static/media/drMain.png": "/portfolio/static/media/drMain.238484e9bf6b6f415ab7.png",
     "static/media/kakaoQR.png": "/portfolio/static/media/kakaoQR.be0a0c5e1acfde5f7a0e.png",
     "static/media/cursor.ico": "/portfolio/static/media/cursor.1efc4de45648d8b8fdb6.ico",
     "index.html": "/portfolio/index.html",
@@ -13,10 +15,10 @@
     "static/media/ArrowTop.svg": "/portfolio/static/media/ArrowTop.42a883a405c46749b7a0e3a98f71d0ce.svg",
     "static/media/Circle.svg": "/portfolio/static/media/Circle.94331aef7f9df6ba3502d57f54f3feb0.svg",
     "main.c0348c0c.css.map": "/portfolio/static/css/main.c0348c0c.css.map",
-    "main.92650db1.js.map": "/portfolio/static/js/main.92650db1.js.map"
+    "main.8c60c917.js.map": "/portfolio/static/js/main.8c60c917.js.map"
   },
   "entrypoints": [
     "static/css/main.c0348c0c.css",
-    "static/js/main.92650db1.js"
+    "static/js/main.8c60c917.js"
   ]
 }
