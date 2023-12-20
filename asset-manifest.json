@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.6926d9f1.js",
+    "main.css": "/portfolio/static/css/main.c0348c0c.css",
+    "main.js": "/portfolio/static/js/main.92650db1.js",
+    "static/media/goldenCityMain.png": "/portfolio/static/media/goldenCityMain.150a78343ab45e642140.png",
+    "static/media/stackOverflowMain.png": "/portfolio/static/media/stackOverflowMain.d3fe3a758204dd777522.png",
+    "static/media/nutritionCodersMain.png": "/portfolio/static/media/nutritionCodersMain.0084e4234608d3bde06a.png",
     "static/media/kakaoQR.png": "/portfolio/static/media/kakaoQR.be0a0c5e1acfde5f7a0e.png",
+    "static/media/cursor.ico": "/portfolio/static/media/cursor.1efc4de45648d8b8fdb6.ico",
     "index.html": "/portfolio/index.html",
     "static/media/KakaoTalk.svg": "/portfolio/static/media/KakaoTalk.ba0b78fa92b0ab277fc418c3330aea5a.svg",
     "static/media/GithubWhite.svg": "/portfolio/static/media/GithubWhite.37500c2287daa3695aef27ea470a39d7.svg",
     "static/media/ArrowTop.svg": "/portfolio/static/media/ArrowTop.42a883a405c46749b7a0e3a98f71d0ce.svg",
     "static/media/Circle.svg": "/portfolio/static/media/Circle.94331aef7f9df6ba3502d57f54f3feb0.svg",
-    "main.6926d9f1.js.map": "/portfolio/static/js/main.6926d9f1.js.map"
+    "main.c0348c0c.css.map": "/portfolio/static/css/main.c0348c0c.css.map",
+    "main.92650db1.js.map": "/portfolio/static/js/main.92650db1.js.map"
   },
   "entrypoints": [
-    "static/js/main.6926d9f1.js"
+    "static/css/main.c0348c0c.css",
+    "static/js/main.92650db1.js"
   ]
 }

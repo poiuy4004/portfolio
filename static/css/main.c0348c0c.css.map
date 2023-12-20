@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.c0348c0c.css","mappings":"AAAA,KAEE,wBAAyB,CADzB,UAAY,CAGZ,wEAAuC,CADvC,eAEF","sources":["index.css"],"sourcesContent":["html{\r\n  color: white;\r\n  background-color: #2b2d2f;\r\n  overflow: hidden;\r\n  cursor: url(../public/cursor.ico), auto;\r\n}"],"names":[],"sourceRoot":""}
