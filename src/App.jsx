@@ -57,12 +57,7 @@ function App() {
         }
       }
       else if(e.deltaY<0){
-        if(isPage-1>0-1){
-          setIsPage(0)
-        }
-        else{
-          setIsPage(Math.floor(window.scrollY/window.innerHeight)-1)
-        }
+        setIsPage(Math.floor(window.scrollY/window.innerHeight)-1)
       }
     },{passive: false})
 
@@ -90,7 +85,7 @@ function App() {
         </OnePage>
         {projects.map((project,idx)=>(
           <OnePage id={"project"+String(idx)}>
-            <Project isPage={isPage} idx={idx} project={project} />
+            <Project isPage={isPage} idx={idx} project={project} key={idx}/>
           </OnePage>
         ))}
         <OnePage id='contact'>
