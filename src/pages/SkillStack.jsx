@@ -8,10 +8,10 @@ const Container = styled.section`
   justify-content: center;
   color: black;
   &>div{padding-top: 8rem;}
-  &>div:nth-of-type(1){opacity: 0; animation: ${props=>props.renderTopPageButton? "renderOne 2s ease-in forwards;" : null}}
-  &>div:nth-of-type(2){opacity: 0; animation: ${props=>props.renderTopPageButton? "renderTwo 2s ease-in forwards;" : null}}
-  &>div:nth-of-type(3){opacity: 0; animation: ${props=>props.renderTopPageButton? "renderThree 2s ease-in forwards;" : null}}
-  &>div:nth-of-type(4){opacity: 0; animation: ${props=>props.renderTopPageButton? "renderFour 2s ease-in forwards;" : null}}
+  &>div:nth-of-type(1){opacity: 0; animation: ${props=>props.isPage>0? "renderOne 2s ease-in forwards;" : null}}
+  &>div:nth-of-type(2){opacity: 0; animation: ${props=>props.isPage>0? "renderTwo 2s ease-in forwards;" : null}}
+  &>div:nth-of-type(3){opacity: 0; animation: ${props=>props.isPage>0? "renderThree 2s ease-in forwards;" : null}}
+  &>div:nth-of-type(4){opacity: 0; animation: ${props=>props.isPage>0? "renderFour 2s ease-in forwards;" : null}}
   @keyframes renderOne {25%{opacity: 1;} 100%{opacity: 1;}}
   @keyframes renderTwo {50%{opacity: 1;} 100%{opacity: 1;}}
   @keyframes renderThree {75%{opacity: 1;} 100%{opacity: 1;}}
@@ -44,9 +44,9 @@ const Skill = styled.div`
   &>text{font-size: 2rem;}
 `
 
-function SkillStack({renderTopPageButton}){
+function SkillStack({isPage}){
   return(
-    <Container renderTopPageButton={renderTopPageButton}>
+    <Container isPage={isPage}>
       <Title>Skill</Title>
       <div>
         <Box>
@@ -70,20 +70,20 @@ function SkillStack({renderTopPageButton}){
           ))}
         </Box>
         <Box>
-          <h2>Native</h2>
-          <span />
-          {skills.native.map(native=>(
-            <Skill>
-              <img src={native.img} height="50rem" width="50rem" /><text>{native.name}</text>
-            </Skill>
-          ))}
-        </Box>
-        <Box>
           <h2>CrossPlatform</h2>
           <span />
           {skills.crossPlatform.map(crossPlatform=>(
             <Skill>
               <img src={crossPlatform.img} height="50rem" width="50rem" /><text>{crossPlatform.name}</text>
+            </Skill>
+          ))}
+        </Box>
+        <Box>
+          <h2>Native</h2>
+          <span />
+          {skills.native.map(native=>(
+            <Skill>
+              <img src={native.img} height="50rem" width="50rem" /><text>{native.name}</text>
             </Skill>
           ))}
         </Box>

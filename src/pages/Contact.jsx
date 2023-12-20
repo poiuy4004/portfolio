@@ -11,44 +11,42 @@ import KakaoTalk from "../components/KakaoTalk";
 import { ReactComponent as GithubWhiteSvg} from "../assets/GithubWhite.svg";
 
 const Container = styled.section`
+  padding: 3% 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   font-size: 6rem;
   font-weight: 700;
 `
 const Name = styled.strong`
   color: transparent;
   &.render{
-    animation: renderName 3s forwards;
+    animation: renderName 2s forwards;
   }
   @keyframes renderName {100%{color: rgb(255,255,255); text-shadow: 0.25rem 0.25rem 0 rgba(255,127,0,0.3);}}
 `
 const TypingText = styled.div`
-  display: flex;
+  display: ${props=>props.isPage>5? "flex" : "none"};
   flex-direction: column;
   justify-content: left;
   text-align: left;
-  &>:first-child{
-    visibility: hidden;
-  }
-  &>:last-child{
+  align-items: center;
+  height: 7rem;
+  &>div{
     position: absolute;
     visibility: hidden;
   }
-  &>:last-child::after{
-    display: block;
+  &>div::after{
+    position: absolute;
+    top: 0; left: 0;
     visibility: visible;
-    width: min-content;
     white-space: pre;
     overflow: hidden;
-    border-right: 0.8rem solid rgb(102, 102, 102);
-    text-align: left;
     animation: typing 3s infinite;
     content: "Frontend Developer Portfolio";
     @keyframes typing {
-      0%{content: "";}
+      0%{content: ""; border-right: 0.8rem solid rgb(102, 102, 102);}
       1%{content: "F";}
       2%{content: "Fr";}
       3%{content: "Fro";}
@@ -72,9 +70,9 @@ const TypingText = styled.div`
       34%{content: "Frontend Developer"; width: 100%; border:none;}
       70%{content: "Frontend Developer"; width: 100%; border:none;}
       71%{content: "Frontend Developer"; width: 100%; border-right: 0.8rem solid rgb(102, 102, 102);}
-      80%{content: "Frontend Developer"; width: 0%;}
-      81%{content: ""; width: min-content;}
-      100%{content: ""; width: min-content;}
+      80%{content: "Frontend Developer"; width: 0%; border-right: 0.8rem solid rgb(102, 102, 102);}
+      81%{content: ""; width: min-content; border: none;}
+      100%{content: ""; width: min-content; border: none;}
     }
   }
 `
@@ -82,7 +80,6 @@ const TypingText = styled.div`
 const IconContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 18rem;
   &>*{
     display: flex;
     justify-content: center;
@@ -183,23 +180,14 @@ const IconContainer = styled.div`
   @keyframes colorGreen {100% {stroke: green;}}
 `
 
-function Contact(){
+function Contact({isPage}){
   const [isModalOpen,setIsModalOpen] = useState(false);
-  const [isNameRender,setIsNameRender] = useState(false);
   const iconContainerRef = useRef();
-  useEffect(()=>{
-    observer.observe(iconContainerRef.current)
-  })
-  function nameRenderHandler(entries){
-    setIsNameRender(entries[0].isIntersecting)
-  }
-  const observer = new IntersectionObserver(nameRenderHandler,{threshold: 1.0,})
 
   return(
     <Container>
-      <div><Name className={isNameRender? "render": null}>장용민</Name></div>
-      <TypingText>
-        <div>Frontend Developer</div>
+      <div><Name className={isPage>5? "render": null}>장용민</Name></div>
+      <TypingText isPage={isPage}>
         <div>Frontend Developer</div>
       </TypingText>
       <IconContainer ref={iconContainerRef}>

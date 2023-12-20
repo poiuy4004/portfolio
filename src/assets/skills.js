@@ -14,10 +14,10 @@ const skills = {
     {name: "OAuth", img: "https://seeklogo.com/images/O/oauth-logo-D9869ED13F-seeklogo.com.png"},
   ],
   native: [
-    {name: "React Native", img: "https://seeklogo.com/images/R/react-native-logo-221C671C70-seeklogo.com.png"},
+    {name: "Flutter", img: "https://seeklogo.com/images/F/flutter-logo-5086DD11C5-seeklogo.com.png"},
   ],
   crossPlatform: [
-    {name: "Flutter", img: "https://seeklogo.com/images/F/flutter-logo-5086DD11C5-seeklogo.com.png"},
+    {name: "React Native", img: "https://seeklogo.com/images/R/react-native-logo-221C671C70-seeklogo.com.png"},
   ],
   communication: [
     {name: "Figma", img: "https://seeklogo.com/images/F/figma-logo-E4E21D3AEA-seeklogo.com.png"},

@@ -11,13 +11,6 @@ import { useEffect, useRef, useState } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  html{
-    scroll-behavior: smooth;
-    cursor: url(../public/cursor.ico), auto;
-    color: white;
-    background-color: #2b2d2f;
-    overflow: hidden;
-  }
   *{
     box-sizing: border-box;
     margin: 0;
@@ -30,59 +23,81 @@ const GlobalStyle = createGlobalStyle`
 const Container = styled.main`
   /* height: 100%; width: 100%; */
 `
+const OnePage = styled.article`
+  height: ${window.innerHeight}px;
+  width: ${window.innerWidth}px;
+  /* margin-top: 2rem; */
+`
 
 const TopPageButtonBox = styled.a`
-  display: ${props=>props.renderTopPageButton? "block" : "none"};
+  display: ${props=>props.isPage>0? "block" : "none"};
   position: fixed;
   bottom: 3%; right: 3%;
   font-size: xxx-large;
   color: white;
 `
 function App() {
-  const windowHeight = window.innerHeight;
-  const windowWidth = window.innerWidth;
   const [isPage,setIsPage] = useState(0);
-  const [renderTopPageButton,setRenderTopPageButton] = useState(false);
+  const introRef = useRef();
   const skillStackRef = useRef();
   useEffect(()=>{
-    function topPageButtonRenderHandler(entries){
-      setRenderTopPageButton(entries[0].isIntersecting)
+    const introObserver = new IntersectionObserver(entries=>entries[0].isIntersecting? setIsPage(0) : null,{threshold: 0.9,})
+    introObserver.observe(introRef.current)
+    const skillObserver = new IntersectionObserver(entries=>entries[0].isIntersecting? setIsPage(1) : null,{threshold: 0.05,})
+    skillObserver.observe(skillStackRef.current)
+
+    window.addEventListener("wheel",e=>{
+      e.preventDefault();
+      if(e.deltaY>0){
+        if(isPage+1<projects.length+3+1){
+          setIsPage(Math.floor(window.scrollY/window.innerHeight)+1)
+        }
+        else{
+          setIsPage(projects.length+3)
+        }
+      }
+      else if(e.deltaY<0){
+        if(isPage-1>0-1){
+          setIsPage(0)
+        }
+        else{
+          setIsPage(Math.floor(window.scrollY/window.innerHeight)-1)
+        }
+      }
+    },{passive: false})
+
+    return ()=>{
+      introObserver.disconnect();
+      skillObserver.disconnect();
     }
-    const observer = new IntersectionObserver(topPageButtonRenderHandler,{threshold: 0.1,})
-    observer.observe(skillStackRef.current)
-    return()=>observer.disconnect();
   },[])
-  
+
   return (
-    <div
-      onWheel={e=>{
-        e.deltaY>0
-        ? isPage<2+projects.length? setIsPage(isPage+1) : setIsPage(2+projects.length)
-        : isPage-1<0? setIsPage(0) : setIsPage(isPage-1)
-        window.scrollTo({top: windowHeight*isPage, behavior: 'smooth'})
-      }}
-    >
+    <div>
     <GlobalStyle />
     <SnowBackground />
-    <Container>
+    <Container
+      onWheel={e=>{
+        window.scrollTo({top: window.innerHeight*isPage, behavior: 'smooth'})
+    }}>
       <Intro />
-      <article id='profile' style={{height: windowHeight, width: windowWidth,}}>
+      <OnePage id='profile' ref={introRef}>
         <Profile />
-      </article>
+      </OnePage>
       <div ref={skillStackRef}>
-        <article style={{height: windowHeight, width: windowWidth,}}>
-          <SkillStack renderTopPageButton={renderTopPageButton} />
-        </article>
-        {projects.map((project)=>(
-          <article style={{height: windowHeight, width: windowWidth,}}>
-            <Project project={project} />
-          </article>
+        <OnePage id='skillStack'>
+          <SkillStack isPage={isPage} />
+        </OnePage>
+        {projects.map((project,idx)=>(
+          <OnePage id={"project"+String(idx)}>
+            <Project isPage={isPage} idx={idx} project={project} />
+          </OnePage>
         ))}
-        <article style={{height: windowHeight, width: windowWidth,}}>
-          <Contact />
-        </article>
+        <OnePage id='contact'>
+          <Contact isPage={isPage} />
+        </OnePage>
       </div>
-      <TopPageButtonBox href='#profile' onClick={()=>setIsPage(0)} renderTopPageButton={renderTopPageButton}><TopPageButton /></TopPageButtonBox>
+      <TopPageButtonBox href='#profile' onClick={()=>setIsPage(0)} isPage={isPage}><TopPageButton /></TopPageButtonBox>
     </Container>
     </div>
   );

@@ -1,0 +1,6 @@
+html{
+  color: white;
+  background-color: #2b2d2f;
+  overflow: hidden;
+  cursor: url(../public/cursor.ico), auto;
+}
