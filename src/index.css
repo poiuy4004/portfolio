@@ -1,5 +1,49 @@
+@font-face {
+  font-family: "GomSin";
+  src: url("./fonts/나눔손글씨\ 곰신체.ttf") format("truetype");
+  unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+}
+@font-face {
+  font-family: "Amsterdam";
+  src: url("./fonts/나눔손글씨\ 암스테르담.ttf");
+  unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+}
+@font-face {
+  font-family: "SungSil";
+  font-weight: 100;
+  src: url("./fonts/나눔손글씨\ 성실체.ttf");
+  unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+}
+@font-face {
+  font-family: "Suit";
+  src: url("./fonts/SUIT-Medium.ttf");
+  unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+}
+@font-face {
+  font-family: "S-CoreDream";
+  src: url("./fonts/SCDream5.otf");
+  unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+}
+@font-face {
+  font-family: "SeoulNamsan";
+  src: url("./fonts/SeoulNamsanM.ttf");
+  unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+}
+/* 한글 1개, 특수문자 4개 */
+@font-face {
+  font-family: "FuturaPTMedium";
+  src: url("./fonts/FuturaPTMedium.otf");
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+@font-face {
+  font-family: "FuturaPTExtraBold";
+  src: url("./fonts/FuturaPTExtraBold.otf");
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+/* 영어 대문자 1개, 영어 소문자 1개, 숫자 1개 */
 html{
   color: white;
+  font-family: "SeoulNamsan", "FuturaPTMedium";
   background-color: #2b2d2f;
   overflow: hidden;
   cursor: url(../public/cursor.ico), auto;

@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.b2288ef1.css",
+    "main.js": "/portfolio/static/js/main.20b9dcb2.js",
+    "static/media/나눔손글씨 곰신체.ttf": "/portfolio/static/media/나눔손글씨 곰신체.f281f600c34facc78579.ttf",
+    "static/media/나눔손글씨 암스테르담.ttf": "/portfolio/static/media/나눔손글씨 암스테르담.83056686f872b3fd07eb.ttf",
+    "static/media/나눔손글씨 성실체.ttf": "/portfolio/static/media/나눔손글씨 성실체.2b74074bed920937ac2b.ttf",
+    "static/media/SeoulNamsanM.ttf": "/portfolio/static/media/SeoulNamsanM.047ac59bf87fa6d836a2.ttf",
+    "static/media/goldenCityMain.png": "/portfolio/static/media/goldenCityMain.150a78343ab45e642140.png",
+    "static/media/gemMain.png": "/portfolio/static/media/gemMain.bf0a275179a173e46b9a.png",
+    "static/media/nutritionCodersMain.png": "/portfolio/static/media/nutritionCodersMain.563025a73c28a74481f8.png",
+    "static/media/stackOverflowMain.png": "/portfolio/static/media/stackOverflowMain.d3fe3a758204dd777522.png",
+    "static/media/SCDream5.otf": "/portfolio/static/media/SCDream5.ae5ee4933db75a3ccb04.otf",
+    "static/media/SUIT-Medium.ttf": "/portfolio/static/media/SUIT-Medium.df0552f549d0c62d51fd.ttf",
+    "static/media/drMain.png": "/portfolio/static/media/drMain.238484e9bf6b6f415ab7.png",
+    "static/media/FuturaPTExtraBold.otf": "/portfolio/static/media/FuturaPTExtraBold.b0a404e778ba6bde9d55.otf",
+    "static/media/FuturaPTMedium.otf": "/portfolio/static/media/FuturaPTMedium.7af6976ce738bec1704e.otf",
+    "static/media/kakaoQR.png": "/portfolio/static/media/kakaoQR.be0a0c5e1acfde5f7a0e.png",
+    "static/media/cursor.ico": "/portfolio/static/media/cursor.1efc4de45648d8b8fdb6.ico",
+    "index.html": "/portfolio/index.html",
+    "static/media/KakaoTalk.svg": "/portfolio/static/media/KakaoTalk.ba0b78fa92b0ab277fc418c3330aea5a.svg",
+    "static/media/GithubWhite.svg": "/portfolio/static/media/GithubWhite.37500c2287daa3695aef27ea470a39d7.svg",
+    "static/media/ArrowTop.svg": "/portfolio/static/media/ArrowTop.42a883a405c46749b7a0e3a98f71d0ce.svg",
+    "static/media/Circle.svg": "/portfolio/static/media/Circle.94331aef7f9df6ba3502d57f54f3feb0.svg",
+    "main.b2288ef1.css.map": "/portfolio/static/css/main.b2288ef1.css.map",
+    "main.20b9dcb2.js.map": "/portfolio/static/js/main.20b9dcb2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b2288ef1.css",
+    "static/js/main.20b9dcb2.js"
+  ]
+}

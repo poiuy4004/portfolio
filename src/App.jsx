@@ -15,18 +15,15 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Karla', sans-serif
   }
   a{text-decoration: none}
   article>section{height: 100%; width: 100%;}
 `
 const Container = styled.main`
-  /* height: 100%; width: 100%; */
 `
 const OnePage = styled.article`
   height: ${window.innerHeight}px;
   width: ${window.innerWidth}px;
-  /* margin-top: 2rem; */
 `
 
 const TopPageButtonBox = styled.a`
