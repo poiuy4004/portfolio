@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.b2288ef1.css",
-    "main.js": "/portfolio/static/js/main.20b9dcb2.js",
+    "main.css": "/portfolio/static/css/main.e64a3843.css",
+    "main.js": "/portfolio/static/js/main.33661a5a.js",
     "static/media/나눔손글씨 곰신체.ttf": "/portfolio/static/media/나눔손글씨 곰신체.f281f600c34facc78579.ttf",
     "static/media/나눔손글씨 암스테르담.ttf": "/portfolio/static/media/나눔손글씨 암스테르담.83056686f872b3fd07eb.ttf",
     "static/media/나눔손글씨 성실체.ttf": "/portfolio/static/media/나눔손글씨 성실체.2b74074bed920937ac2b.ttf",
@@ -22,11 +22,11 @@
     "static/media/GithubWhite.svg": "/portfolio/static/media/GithubWhite.37500c2287daa3695aef27ea470a39d7.svg",
     "static/media/ArrowTop.svg": "/portfolio/static/media/ArrowTop.42a883a405c46749b7a0e3a98f71d0ce.svg",
     "static/media/Circle.svg": "/portfolio/static/media/Circle.94331aef7f9df6ba3502d57f54f3feb0.svg",
-    "main.b2288ef1.css.map": "/portfolio/static/css/main.b2288ef1.css.map",
-    "main.20b9dcb2.js.map": "/portfolio/static/js/main.20b9dcb2.js.map"
+    "main.e64a3843.css.map": "/portfolio/static/css/main.e64a3843.css.map",
+    "main.33661a5a.js.map": "/portfolio/static/js/main.33661a5a.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2288ef1.css",
-    "static/js/main.20b9dcb2.js"
+    "static/css/main.e64a3843.css",
+    "static/js/main.33661a5a.js"
   ]
 }
