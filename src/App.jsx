@@ -30,66 +30,77 @@ const TopPageButtonBox = styled.a`
   display: ${props=>props.isPage>0? "block" : "none"};
   position: fixed;
   bottom: 3%; right: 3%;
-  font-size: xxx-large;
+  font-size: 3rem;
   color: white;
 `
 function App() {
   const [isPage,setIsPage] = useState(0);
-  const introRef = useRef();
-  const skillStackRef = useRef();
+  const [maxPage,setMaxPage] = useState(0);
+  const outerDivRef = useRef();
+  function pageHandler(e){
+    e.preventDefault();
+    if(e.deltaY>0){
+      if(isPage<projects.length-1+3){
+        setIsPage(Math.floor(window.scrollY/window.innerHeight)+1);
+        setMaxPage(Math.floor(window.scrollY/window.innerHeight)+1);
+      }
+      else if(isPage>=projects.length-1+3){
+        setIsPage(projects.length-1+3);
+      }
+    }
+    else if(e.deltaY<0){
+      if((window.scrollY/window.innerHeight)>0){
+        setIsPage(Math.floor(window.scrollY/window.innerHeight)-1);
+      }
+      else if((window.scrollY/window.innerHeight)<=0){
+        setIsPage(0);
+      }
+    }
+  }
   useEffect(()=>{
-    const introObserver = new IntersectionObserver(entries=>entries[0].isIntersecting? setIsPage(0) : null,{threshold: 0.9,})
-    introObserver.observe(introRef.current)
-    const skillObserver = new IntersectionObserver(entries=>entries[0].isIntersecting? setIsPage(1) : null,{threshold: 0.05,})
-    skillObserver.observe(skillStackRef.current)
-
-    window.addEventListener("wheel",e=>{
-      e.preventDefault();
-      if(e.deltaY>0){
-        if(isPage+1<projects.length+3+1){
-          setIsPage(Math.floor(window.scrollY/window.innerHeight)+1)
-        }
-        else{
-          setIsPage(projects.length+3)
-        }
-      }
-      else if(e.deltaY<0){
-        setIsPage(Math.floor(window.scrollY/window.innerHeight)-1)
-      }
-    },{passive: false})
+    outerDivRef.current.addEventListener("wheel",e=>pageHandler(e),{passive: false})
 
     return ()=>{
-      introObserver.disconnect();
-      skillObserver.disconnect();
+      outerDivRef.current.removeEventListener("wheel",e=>pageHandler(e),{passive: false})
     }
-  },[])
+  },[isPage, projects.length])
+
+  function fullPageScrollHandler(e){
+    if(e.deltaY>0){
+      window.scrollTo({top: window.innerHeight*isPage, behavior: 'smooth'})
+    }
+    else if(e.deltaY<=0){
+      window.scrollTo({top: window.innerHeight*isPage, behavior: 'smooth'})
+    }
+  }
 
   return (
-    <div>
+    <div id='wheelBox' onWheel={e=>fullPageScrollHandler(e)} ref={outerDivRef} >
     <GlobalStyle />
     <SnowBackground />
-    <Container
-      onWheel={e=>{
-        window.scrollTo({top: window.innerHeight*isPage, behavior: 'smooth'})
-    }}>
+    <Container>
       <Intro />
-      <OnePage id='profile' ref={introRef}>
+      <OnePage id='profile'>
         <Profile />
       </OnePage>
-      <div ref={skillStackRef}>
+      <div>
         <OnePage id='skillStack'>
-          <SkillStack isPage={isPage} />
+          <SkillStack maxPage={maxPage} />
         </OnePage>
         {projects.map((project,idx)=>(
           <OnePage id={"project"+String(idx)}>
-            <Project isPage={isPage} idx={idx} project={project} key={idx}/>
+            <Project maxPage={maxPage} idx={idx} project={project} key={idx}/>
           </OnePage>
         ))}
         <OnePage id='contact'>
-          <Contact isPage={isPage} />
+          <Contact maxPage={maxPage} />
         </OnePage>
       </div>
-      <TopPageButtonBox href='#profile' onClick={()=>setIsPage(0)} isPage={isPage}><TopPageButton /></TopPageButtonBox>
+      <TopPageButtonBox href='#profile' onClick={()=>{
+        setIsPage(0); setMaxPage(0);
+      }} isPage={isPage}>
+        <TopPageButton />
+      </TopPageButtonBox>
     </Container>
     </div>
   );

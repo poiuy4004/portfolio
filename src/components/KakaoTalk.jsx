@@ -26,7 +26,7 @@ const Header = styled.div`
   align-items: center;
   text-align: center;
   padding: 20px 24px;
-  &>:first-child{font-size: xx-large; cursor: pointer;}
+  &>:first-child{justify-self: flex-start; font-size: 2rem; cursor: pointer;}
 `
 const IconBox = styled.div`
   display: flex;

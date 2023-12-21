@@ -35,9 +35,13 @@ const TextContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: xxx-large;
-  &>:first-child::before{content: "Frontend"}
-  &>:last-child::before{content: "Portfolio"}
+  font-size: 5rem;
+  &>:first-child::before{content: "Frontend";}
+  &>:last-child::before{content: "Portfolio";}
+  @media (max-height: 888px),(max-width: 1280px) {
+    &>:first-child::before{font-size: 3rem; content: "FE";}
+    &>:last-child::before{font-size: 3rem; content: "Dev";}
+  }
 `
 const BorderContainer = styled.div`
   position: absolute;
@@ -56,9 +60,16 @@ const BorderContainer = styled.div`
   &>span{
     position: absolute;
     top: 101%;
-    font-size: xx-large;
+    font-size: 3rem;
     font-weight: 700;
     animation: showName 1s;
+    @media (max-height: 888px),(max-width: 1280px) {
+      top: 94%;
+    }
+  }
+  &>span::before{content: "By.YongMin";}
+  @media (max-height: 888px),(max-width: 1280px) {
+    &>span::before{font-size: 1.5rem; content: "YongMin";}
   }
   @keyframes borderTop {0%{transform: translateX(-234%)}; 25%{transform: translate(0)};}
   @keyframes borderLeft {0%{transform: translateY(234%)}; 74%{transform: translateY(234%)}; 100%{transform: translateY(0);}}
@@ -92,7 +103,7 @@ function Intro(){
         <div></div>
         <div></div>
         <div></div>
-        <span>by.YongMin</span>
+        <span></span>
       </BorderContainer>
     </Box>
     </article>

@@ -48,3 +48,9 @@ html{
   overflow: hidden;
   cursor: url(../public/cursor.ico), auto;
 }
+@media (max-height: 888px),(max-width: 1280px) {
+  html{
+    overflow: auto;
+    cursor: auto;
+  }
+}

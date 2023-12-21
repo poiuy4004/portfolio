@@ -27,7 +27,7 @@ const Name = styled.strong`
   @keyframes renderName {100%{color: rgb(255,255,255); text-shadow: 0.25rem 0.25rem 0 rgba(255,127,0,0.3);}}
 `
 const TypingText = styled.div`
-  display: ${props=>props.isPage>7? "flex" : "none"};
+  display: ${props=>props.maxPage>7? "flex" : "none"};
   flex-direction: column;
   justify-content: left;
   text-align: left;
@@ -180,14 +180,14 @@ const IconContainer = styled.div`
   @keyframes colorGreen {100% {stroke: green;}}
 `
 
-function Contact({isPage}){
+function Contact({maxPage}){
   const [isModalOpen,setIsModalOpen] = useState(false);
   const iconContainerRef = useRef();
 
   return(
     <Container>
-      <div><Name className={isPage>7? "render": null}>장용민</Name></div>
-      <TypingText isPage={isPage}>
+      <div><Name className={maxPage>7? "render": null}>장용민</Name></div>
+      <TypingText maxPage={maxPage}>
         <div>Frontend Developer</div>
       </TypingText>
       <IconContainer ref={iconContainerRef}>

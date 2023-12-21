@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.section`
-  opacity: ${props=>props.isPage>props.idx+1? 1 : 0};
+  opacity: ${props=>props.maxPage>props.idx+1? 1 : 0};
   padding: 5% 15%;
   transition: 2s;
   &>div{
@@ -43,24 +43,37 @@ const Container = styled.section`
       font-size: 3rem;
     }
   }
+  @media (max-height: 888px),(max-width: 1280px) {
+    padding: 15%;
+    &>div{padding: 1rem 1rem 0;}
+    &>div>h3{font-size: 2rem;}
+  }
 `
 const Description = styled.p`
   white-space: pre;
   margin-bottom: 2rem;
+  @media (max-height: 888px),(max-width: 1280px) {
+    display: none;
+  }
 `
 const Box = styled.div`
   display: grid;
   justify-items: center;
   align-items: center;
   grid-template-columns: 1fr 1fr;
+  @media (max-height: 888px),(max-width: 1280px) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 const ImgBox = styled.div`
   height: 33rem;
   width: 30rem;
   background: url(${props=>props.backImage}) center 0px / cover no-repeat;
-  &>img{
-    max-height: 555rem;
-    max-width: 22rem;
+  @media (max-height: 888px),(max-width: 1280px) {
+    height: 14rem;
+    width: 14rem;
+    margin-bottom: 1rem;
   }
 `
 const DetailDescription = styled.p`
@@ -68,6 +81,10 @@ const DetailDescription = styled.p`
   line-height: 2rem;
   font-size: 1.2rem;
   font-weight: 700;
+  @media (max-height: 888px),(max-width: 1280px) {
+    font-size: 0.7rem;
+    line-height: 1rem;
+  }
 `
 const MyTask = styled.p`
   padding: 0 5rem;
@@ -77,6 +94,10 @@ const MyTask = styled.p`
   font-weight: 700;
   &>:first-child{
     margin: 0.5rem 0 0.2rem 1rem;
+  }
+  @media (max-height: 888px),(max-width: 1280px) {
+    padding: 0 2rem;
+    font-size: 0.5rem;
   }
 `
 const Stack = styled.div`
@@ -90,6 +111,10 @@ const Stack = styled.div`
   &>:last-child{
     display: flex;
     flex-wrap: wrap;
+  }
+  @media (max-height: 888px),(max-width: 1280px) {
+    padding: 0 2rem;
+    font-size: 0.5rem;
   }
 `
 const Skill = styled.div`
@@ -107,9 +132,9 @@ const Skill = styled.div`
                             };
 `
 
-function Project({isPage,idx,project}){
+function Project({maxPage,idx,project}){
     return(
-      <Container isPage={isPage} idx={idx}>
+      <Container maxPage={maxPage} idx={idx}>
         <div>
           <h3>
             {project.title}

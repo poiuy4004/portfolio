@@ -20,26 +20,34 @@ const Container = styled.section`
   &>:nth-child(12){top: 84%; left: 84%; animation:}
   &>:nth-child(13){top: 3%; left: 14%; animation:}
   @keyframes cloudText {100%{font-size: 10px; color: gray;}}
+  @media (max-height: 888px),(max-width: 1280px) {
+    &>div{display:none;}
+  }
 `
 const Name = styled.h1`
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 77px;
+  font-size: 7rem;
   &>:first-child{
-    margin-right: 20px;
+    margin-right: 1rem;
     animation: moveToLeft 1.2s infinite;
-    @keyframes moveToLeft {50%{transform: translateX(-55px) scale(140%); margin-right: 55px;}}
+    @keyframes moveToLeft {50%{transform: translateX(-7rem) scale(140%); margin-right: 3rem;}}
   }
   &>strong{
     animation: scaleUp 1.2s infinite;
-    @keyframes scaleUp {50%{transform: scale(140%)}}
+    @keyframes scaleUp {50%{transform: scale(180%)}}
   }
   &>:last-child{
-    margin-left: 10px;
+    margin-left: 1rem;
     animation: moveToRight 1.2s infinite;
-    @keyframes moveToRight {50%{transform: translateX(55px) scale(140%); margin-left: 50px;}}
+    @keyframes moveToRight {50%{transform: translateX(8rem) scale(140%); margin-left: 4rem;}}
+  }
+  @media (max-height: 888px),(max-width: 1280px) {
+    font-size: 3rem;
+    @keyframes moveToLeft {50%{transform: translateX(-2rem) scale(140%); margin-right: 3rem;}}
+    @keyframes moveToRight {50%{transform: translateX(2rem) scale(140%); margin-left: 4rem;}}
   }
 `
 
