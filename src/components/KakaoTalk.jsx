@@ -18,6 +18,9 @@ const Container = styled.section`
   &>span>button:hover{background-color: ivory; color: gray; border: none; border-radius: 10px;}
   &>span>button:active{background-color: gray; color: white; border: none; border-radius: 10px;}
   & a{color: white;}
+  @media (max-height: 888px),(max-width: 1280px) {
+    height: 100%; width: 100%;
+  }
 `
 const Header = styled.div`
   height: 70px;
@@ -76,7 +79,7 @@ function KakaoTalk({setIsModalOpen}){
         <div onClick={()=>setIsModalOpen(false)}>×</div>
         <IconBox>
           <i class="fa-solid fa-gift"></i>
-          <i class="fa-solid fa-won-sign"></i>
+          <a href="https://toss.me/kjbank" target="_blank" class="fa-solid fa-won-sign"></a>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-ellipsis-vertical"></i>
         </IconBox>

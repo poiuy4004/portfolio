@@ -60,13 +60,14 @@ const Description = styled.div`
   }
 `
 const Box = styled.div`
+  height: 80%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   @media (max-height: 888px),(max-width: 1280px) {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
   }
 `
 const ImgBox = styled.div`

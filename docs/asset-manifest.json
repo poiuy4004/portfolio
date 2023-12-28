@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.e64a3843.css",
-    "main.js": "/portfolio/static/js/main.030e13e5.js",
+    "main.js": "/portfolio/static/js/main.6112b732.js",
     "static/media/나눔손글씨 곰신체.ttf": "/portfolio/static/media/나눔손글씨 곰신체.f281f600c34facc78579.ttf",
     "static/media/나눔손글씨 암스테르담.ttf": "/portfolio/static/media/나눔손글씨 암스테르담.83056686f872b3fd07eb.ttf",
     "static/media/나눔손글씨 성실체.ttf": "/portfolio/static/media/나눔손글씨 성실체.2b74074bed920937ac2b.ttf",
@@ -23,10 +23,10 @@
     "static/media/ArrowTop.svg": "/portfolio/static/media/ArrowTop.42a883a405c46749b7a0e3a98f71d0ce.svg",
     "static/media/Circle.svg": "/portfolio/static/media/Circle.94331aef7f9df6ba3502d57f54f3feb0.svg",
     "main.e64a3843.css.map": "/portfolio/static/css/main.e64a3843.css.map",
-    "main.030e13e5.js.map": "/portfolio/static/js/main.030e13e5.js.map"
+    "main.6112b732.js.map": "/portfolio/static/js/main.6112b732.js.map"
   },
   "entrypoints": [
     "static/css/main.e64a3843.css",
-    "static/js/main.030e13e5.js"
+    "static/js/main.6112b732.js"
   ]
 }

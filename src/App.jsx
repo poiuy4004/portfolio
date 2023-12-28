@@ -6,6 +6,7 @@ import SkillStack from './pages/SkillStack';
 import projects from './assets/projects';
 import Project from './pages/Project';
 import Contact from './pages/Contact';
+import KakaoButton from './pages/KakaoButton';
 
 import { useEffect, useRef, useState } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
@@ -27,7 +28,7 @@ const OnePage = styled.article`
 `
 
 const TopPageButtonBox = styled.a`
-  display: ${props=>props.isPage>0? "block" : "none"};
+  display: ${props=>(props.maxPage)>0&&(props.maxPage)!=99? "block" : "none"};
   position: fixed;
   bottom: 3%; right: 3%;
   font-size: 3rem;
@@ -100,11 +101,16 @@ function App() {
           <Contact maxPage={maxPage} />
         </OnePage>
       </div>
-      <TopPageButtonBox href='#profile' onClick={()=>{
-        setIsPage(0); setMaxPage(0);
-      }} isPage={isPage}>
+      <TopPageButtonBox
+        href='#profile' maxPage={maxPage}
+        onClick={()=>{
+          setIsPage(0);
+          setMaxPage(0);
+        }}
+      >
         <TopPageButton />
       </TopPageButtonBox>
+      <KakaoButton maxPage={maxPage} />
     </Container>
     </div>
   );

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import Modal from "../components/Modal";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 import { ReactComponent as Circle } from "../assets/Circle.svg";
 
@@ -266,7 +266,6 @@ const IconContainer = styled.div`
 
 function Contact({maxPage}){
   const [isModalOpen,setIsModalOpen] = useState(false);
-  const iconContainerRef = useRef();
 
   return(
     <Container>
@@ -274,7 +273,7 @@ function Contact({maxPage}){
       <TypingText maxPage={maxPage}>
         <div>Frontend Developer</div>
       </TypingText>
-      <IconContainer ref={iconContainerRef}>
+      <IconContainer>
         <a href="tel:010-7184-2594" target="_blank" rel="noreferrer noopener">
           <Circle />
           <div>
