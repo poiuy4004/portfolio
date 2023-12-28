@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 const Container = styled.section`
   opacity: ${props=>props.maxPage>props.idx+1? 1 : 0};
-  padding: 5% 15%;
+  padding: 5% 10%;
   transition: 2s;
+  & *{white-space: break-spaces;}
   &>div{
-    padding: 1rem 5rem 0;
+    padding: 1% 3% 0;
     height: 100%; width: 100%;
     color: black;
     text-align: center;
@@ -44,23 +45,21 @@ const Container = styled.section`
     }
   }
   @media (max-height: 888px),(max-width: 1280px) {
-    padding: 15%;
-    &>div{padding: 1rem 1rem 0;}
+    padding: 10% 7%;
+    &>div{padding: 3% 3% 0;}
     &>div>h3{font-size: 2rem;}
   }
 `
-const Description = styled.p`
-  white-space: pre;
+const Description = styled.div`
   margin-bottom: 2rem;
   @media (max-height: 888px),(max-width: 1280px) {
     display: none;
   }
 `
 const Box = styled.div`
-  display: grid;
-  justify-items: center;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  grid-template-columns: 1fr 1fr;
   @media (max-height: 888px),(max-width: 1280px) {
     display: flex;
     flex-direction: column;
@@ -76,8 +75,7 @@ const ImgBox = styled.div`
     margin-bottom: 1rem;
   }
 `
-const DetailDescription = styled.p`
-  white-space: pre;
+const DetailDescription = styled.div`
   line-height: 2rem;
   font-size: 1.2rem;
   font-weight: 700;
@@ -86,22 +84,19 @@ const DetailDescription = styled.p`
     line-height: 1rem;
   }
 `
-const MyTask = styled.p`
-  padding: 0 5rem;
+const MyTask = styled.div`
   text-align: left;
-  white-space: pre;
   font-size: 1rem;
   font-weight: 700;
   &>:first-child{
     margin: 0.5rem 0 0.2rem 1rem;
   }
   @media (max-height: 888px),(max-width: 1280px) {
-    padding: 0 2rem;
+    margin: 0 0 0 24%;
     font-size: 0.5rem;
   }
 `
 const Stack = styled.div`
-  padding: 0 5rem;
   text-align: left;
   font-size: 1rem;
   font-weight: 700;
@@ -113,13 +108,13 @@ const Stack = styled.div`
     flex-wrap: wrap;
   }
   @media (max-height: 888px),(max-width: 1280px) {
-    padding: 0 2rem;
+    margin: 0 0 0 10%;
     font-size: 0.5rem;
   }
 `
 const Skill = styled.div`
-  margin: 0.1rem;
-  padding: 0.1rem 0.5rem;
+  margin: 0.3% 0.5%;
+  padding: 0.5% 3%;
   color: white;
   white-space: nowrap;
   border-radius: 14px;
@@ -149,7 +144,7 @@ function Project({maxPage,idx,project}){
               <DetailDescription>{project.detailDescription}</DetailDescription>
               <MyTask>
                 <div>&lt;My Task&gt;</div>
-                {project.myTask}
+                <div>{project.myTask}</div>
               </MyTask>
               <Stack>
                 <div>&lt;Stack&gt;</div>

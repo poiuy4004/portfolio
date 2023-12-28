@@ -75,6 +75,9 @@ const TypingText = styled.div`
       100%{content: ""; width: min-content; border: none;}
     }
   }
+  @media (max-height: 888px),(max-width: 1280px) {
+    font-size: 3rem;
+  }
 `
 
 const IconContainer = styled.div`
@@ -86,7 +89,7 @@ const IconContainer = styled.div`
     align-items: center;
     width: 7rem;
     height: 7rem;
-    margin: 0.2em;
+    margin: 2rem;
     cursor: pointer;
   }
 
@@ -148,7 +151,9 @@ const IconContainer = styled.div`
   }
 
   &>:nth-child(5)>:nth-child(2){
-    margin: 0.7rem 0 0 0.05rem;
+    margin: 1rem 0 0 0.05rem;
+    height: 3.7rem;
+    width: 3.7rem;
     fill: white;
   }
   &>:nth-child(5):hover>:nth-child(2){
@@ -178,6 +183,83 @@ const IconContainer = styled.div`
   @keyframes colorBlue {100% {stroke: blue;}}
   @keyframes colorBlack {100% {stroke: black;}}
   @keyframes colorGreen {100% {stroke: green;}}
+  @media (max-height: 888px),(max-width: 1280px) {
+    &>*{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3rem;
+      height: 3rem;
+      margin: 1rem;
+      cursor: pointer;
+    }
+    &>*>:first-child{
+      position: absolute;
+      width: 3rem;
+      height: 3rem;
+      animation: threeBorder 1s ease-in-out forwards;
+      fill: none;
+      stroke-dasharray: 37;
+      transition: all .2s ease-in-out;
+    }
+    &>*:hover>:first-child{
+      fill: #fff;
+      stroke-width: 5rem;
+      transition: all .2s ease-in-out;
+    }
+    &>:nth-child(1):hover>:first-child{
+      animation: circleBorder 1s ease-in-out forwards, colorRed 1s linear forwards;
+    }
+    &>:nth-child(2):hover>:first-child{
+      animation: circleBorder 1s ease-in-out forwards, colorYellow 1s linear forwards;
+    }
+    &>:nth-child(3):hover>:first-child{
+      animation: circleBorder 1s ease-in-out forwards, colorGreen 1s linear forwards;
+    }
+    &>:nth-child(4):hover>:first-child{
+      animation: circleBorder 1s ease-in-out forwards, colorBlue 1s linear forwards;
+    }
+    &>:nth-child(5):hover>:first-child{
+      animation: circleBorder 1s ease-in-out forwards, colorBlack 1s linear forwards;
+    }
+  
+    &>*>:nth-child(2){
+      position: absolute;
+      width: 3rem;
+      height: 3rem;
+      color: white;
+      font-size: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0.3rem;
+    }
+    &>:nth-child(2)>:nth-child(2){
+      fill: yellow;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1rem;
+      &>*{
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+    &>:nth-child(2):hover>:nth-child(2){
+      fill: black;
+      width: 3rem;
+      height: 3rem;
+    }
+  
+    &>:nth-child(5)>:nth-child(2){
+      margin: 0.3rem 0 0 0.05rem;
+      height: 1.4rem;
+      width: 1.4rem;
+      fill: white;
+    }
+    &>:nth-child(5):hover>:nth-child(2){
+      fill: black;
+    }
+  }
 `
 
 function Contact({maxPage}){
