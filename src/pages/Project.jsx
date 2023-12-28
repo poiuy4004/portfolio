@@ -42,6 +42,9 @@ const Container = styled.section`
                                     : "black"
                                     };
       font-size: 3rem;
+      @media (max-height: 888px),(max-width: 1280px) {
+        margin-bottom: 1rem;
+      }
     }
   }
   @media (max-height: 888px),(max-width: 1280px) {

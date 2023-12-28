@@ -20,6 +20,9 @@ const GlobalStyle = createGlobalStyle`
   article>section{height: 100%; width: 100%;}
 `
 const Container = styled.main`
+  @media (max-height: 888px),(max-width: 1280px) {
+    ${props=>props.setMaxPage(99)}
+  }
 `
 const OnePage = styled.article`
   height: ${window.innerHeight}px;
@@ -78,7 +81,7 @@ function App() {
     <div id='wheelBox' onWheel={e=>fullPageScrollHandler(e)} ref={outerDivRef} >
     <GlobalStyle />
     <SnowBackground />
-    <Container>
+    <Container setMaxPage={setMaxPage}>
       <Intro />
       <OnePage id='profile'>
         <Profile />

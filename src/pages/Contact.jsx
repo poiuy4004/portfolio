@@ -207,6 +207,8 @@ const IconContainer = styled.div`
       stroke-width: 5rem;
       transition: all .2s ease-in-out;
     }
+    &>:nth-child(1){display:none;}
+    &>:nth-child(5){display:none;}
     &>:nth-child(1):hover>:first-child{
       animation: circleBorder 1s ease-in-out forwards, colorRed 1s linear forwards;
     }
