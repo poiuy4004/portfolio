@@ -66,6 +66,7 @@ const Box = styled.div`
   @media (max-height: 888px),(max-width: 1280px) {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
   }
 `
 const ImgBox = styled.div`
@@ -75,7 +76,7 @@ const ImgBox = styled.div`
   @media (max-height: 888px),(max-width: 1280px) {
     height: 14rem;
     width: 14rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 `
 const DetailDescription = styled.div`
@@ -85,6 +86,7 @@ const DetailDescription = styled.div`
   @media (max-height: 888px),(max-width: 1280px) {
     font-size: 0.7rem;
     line-height: 1rem;
+    margin-bottom: 1rem;
   }
 `
 const MyTask = styled.div`
@@ -96,6 +98,10 @@ const MyTask = styled.div`
   font-weight: 700;
   @media (max-height: 888px),(max-width: 1280px) {
     font-size: 0.5rem;
+    margin-bottom: 1rem;
+    &>:first-child{
+      margin-bottom: 0.3rem;
+    }
     &>:last-child{
       max-height: 80px;
       overflow: scroll;
@@ -115,6 +121,13 @@ const Stack = styled.div`
   }
   @media (max-height: 888px),(max-width: 1280px) {
     font-size: 0.5rem;
+    &>:first-child{
+      margin-bottom: 0.3rem;
+    }
+    &>:last-child{
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+    }
   }
 `
 const Skill = styled.div`
