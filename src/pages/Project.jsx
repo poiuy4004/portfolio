@@ -88,30 +88,32 @@ const DetailDescription = styled.div`
   }
 `
 const MyTask = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: left;
   font-size: 1rem;
   font-weight: 700;
-  &>:first-child{
-    margin: 0.5rem 0 0.2rem 1rem;
-  }
   @media (max-height: 888px),(max-width: 1280px) {
-    margin: 0 0 0 24%;
     font-size: 0.5rem;
+    &>:last-child{
+      max-height: 80px;
+      overflow: scroll;
+    }
   }
 `
 const Stack = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: left;
   font-size: 1rem;
   font-weight: 700;
-  &>:first-child{
-    margin: 0.5rem 0 0.2rem 1rem;
-  }
   &>:last-child{
     display: flex;
     flex-wrap: wrap;
   }
   @media (max-height: 888px),(max-width: 1280px) {
-    margin: 0 0 0 10%;
     font-size: 0.5rem;
   }
 `

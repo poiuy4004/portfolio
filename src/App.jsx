@@ -20,9 +20,6 @@ const GlobalStyle = createGlobalStyle`
   article>section{height: 100%; width: 100%;}
 `
 const Container = styled.main`
-  @media (max-height: 888px),(max-width: 1280px) {
-    ${props=>props.setMaxPage(99)}
-  }
 `
 const OnePage = styled.article`
   height: ${window.innerHeight}px;
@@ -63,6 +60,10 @@ function App() {
   useEffect(()=>{
     outerDivRef.current.addEventListener("wheel",e=>pageHandler(e),{passive: false})
 
+    if(window.innerHeight<888||window.innerWidth<1280){
+      setMaxPage(99)
+    }
+    
     return ()=>{
       outerDivRef.current.removeEventListener("wheel",e=>pageHandler(e),{passive: false})
     }
@@ -81,7 +82,7 @@ function App() {
     <div id='wheelBox' onWheel={e=>fullPageScrollHandler(e)} ref={outerDivRef} >
     <GlobalStyle />
     <SnowBackground />
-    <Container setMaxPage={setMaxPage}>
+    <Container>
       <Intro />
       <OnePage id='profile'>
         <Profile />
