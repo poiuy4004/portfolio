@@ -16,10 +16,6 @@ const Container = styled.section`
   @keyframes renderTwo {50%{opacity: 1;} 100%{opacity: 1;}}
   @keyframes renderThree {75%{opacity: 1;} 100%{opacity: 1;}}
   @keyframes renderFour {100%{opacity: 1;}}
-  @media (max-height: 888px),(max-width: 1280px) {
-    padding-top: 1rem;
-    &>div{padding-top: 4rem;}
-  }
 `
 const Title = styled.h1`
   position: absolute;

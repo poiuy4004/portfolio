@@ -265,7 +265,7 @@ const IconContainer = styled.div`
 `
 
 function Contact({maxPage}){
-  const [isModalOpen,setIsModalOpen] = useState(false);
+  const [isModalOpen,setIsModalOpen] = useState(true);
 
   return(
     <Container>

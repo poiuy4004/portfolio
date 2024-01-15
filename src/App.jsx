@@ -23,8 +23,8 @@ const GlobalStyle = createGlobalStyle`
 const Container = styled.main`
 `
 const OnePage = styled.article`
-  height: ${window.innerHeight}px;
-  width: ${window.innerWidth}px;
+  height: 100vh;
+  width: 100wh;
 `
 
 const TopPageButtonBox = styled.a`

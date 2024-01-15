@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 const Container = styled.section`
   opacity: ${props=>props.maxPage>props.idx+1? 1 : 0};
-  padding: 5% 10%;
+  padding: 5rem 10rem;
   transition: 2s;
   & *{white-space: break-spaces;}
   &>div{
-    padding: 1% 3% 0;
+    padding: 1rem 3rem 0;
     height: 100%; width: 100%;
     color: black;
     text-align: center;
@@ -33,24 +33,21 @@ const Container = styled.section`
                                                     : props.idx==4?"rgb(255,215,0)"
                                                     : "black"
                                                     };
-    &>h3{
-      text-shadow: 0 0 5px ${props=>props.idx==0? "rgb(14,120,223)"
-                                    : props.idx==1? "rgb(37,161,142)"
-                                    : props.idx==2? "rgb(255,166,0)"
-                                    : props.idx==3? "rgb(27,117,208)"
-                                    : props.idx==4?"rgb(255,215,0)"
-                                    : "black"
-                                    };
-      font-size: 3rem;
-      @media (max-height: 888px),(max-width: 1280px) {
-        margin-bottom: 1rem;
-      }
-    }
+  }
+  &>div>h3{
+    text-shadow: 0 0 5px ${props=>props.idx==0? "rgb(14,120,223)"
+                                  : props.idx==1? "rgb(37,161,142)"
+                                  : props.idx==2? "rgb(255,166,0)"
+                                  : props.idx==3? "rgb(27,117,208)"
+                                  : props.idx==4?"rgb(255,215,0)"
+                                  : "black"
+                                  };
+    font-size: 3rem;
   }
   @media (max-height: 888px),(max-width: 1280px) {
-    padding: 10% 7%;
-    &>div{padding: 3% 3% 0;}
-    &>div>h3{font-size: 2rem;}
+    padding: 3rem 1rem;
+    &>div{padding: 3rem 1.4rem 0;}
+    &>div>h3{font-size: 3rem;}
   }
 `
 const Description = styled.div`
@@ -68,6 +65,11 @@ const Box = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    &>:last-child{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 `
 const ImgBox = styled.div`
@@ -85,7 +87,7 @@ const DetailDescription = styled.div`
   font-size: 1.2rem;
   font-weight: 700;
   @media (max-height: 888px),(max-width: 1280px) {
-    font-size: 0.7rem;
+    font-size: .9rem;
     line-height: 1rem;
     margin-bottom: 1rem;
   }
@@ -98,13 +100,13 @@ const MyTask = styled.div`
   font-size: 1rem;
   font-weight: 700;
   @media (max-height: 888px),(max-width: 1280px) {
-    font-size: 0.5rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
     &>:first-child{
       margin-bottom: 0.3rem;
     }
     &>:last-child{
-      max-height: 80px;
+      max-height: 14rem;
       overflow: scroll;
     }
   }
@@ -121,7 +123,10 @@ const Stack = styled.div`
     flex-wrap: wrap;
   }
   @media (max-height: 888px),(max-width: 1280px) {
-    font-size: 0.5rem;
+    display: block;
+    width: 18rem;
+    font-size: 1.2rem;
+    text-align: center;
     &>:first-child{
       margin-bottom: 0.3rem;
     }
