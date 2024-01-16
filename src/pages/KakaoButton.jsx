@@ -58,7 +58,7 @@ const Container = styled.div`
 `
 
 function KakaoButton({maxPage}){
-  const [isModalOpen,setIsModalOpen] = useState(false);
+  const [isModalOpen,setIsModalOpen] = useState(true);
   return(
     <Container
       maxPage={maxPage}
