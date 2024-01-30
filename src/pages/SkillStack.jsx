@@ -87,35 +87,8 @@ function SkillStack({maxPage}){
             </Skill>
           ))}
         </Box>
-        <Box>
-          <h2>{(window.innerHeight>887)&&(window.innerWidth>1279)? "CrossPlatform" : "APP"}</h2>
-          <span />
-          {skills.crossPlatform.map(crossPlatform=>(
-            <Skill>
-              <img src={crossPlatform.img} height="50rem" width="50rem" /><text>{crossPlatform.name}</text>
-            </Skill>
-          ))}
-        </Box>
-        <Box>
-          <h2>{(window.innerHeight>887)&&(window.innerWidth>1279)? "Native" : "APP"}</h2>
-          <span />
-          {skills.native.map(native=>(
-            <Skill>
-              <img src={native.img} height="50rem" width="50rem" /><text>{native.name}</text>
-            </Skill>
-          ))}
-        </Box>
       </div>
       <div>
-        <Box>
-          <h2>{(window.innerHeight>887)&&(window.innerWidth>1279)? "Communication" : "Tools"}</h2>
-          <span />
-          {skills.communication.map(communication=>(
-            <Skill>
-              <img src={communication.img} height="50rem" width="50rem" /><text>{communication.name}</text>
-            </Skill>
-          ))}
-        </Box>
         <Box>
           <h2>Design</h2>
           <span />
