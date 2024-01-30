@@ -17,13 +17,21 @@ FE Dev JangYongMin.
 ## Stack
 
 ### Frontend
+| <img src="" width=75px></img> | <img src="" width=75px></img> | <img src="" width=75px></img> | <img src="" width=75px></img> | <img src="" width=75px></img> | <img src="" width=75px></img> |
+| ------- | ----- | ------------ | ------- | ------ | ---- |
 | Next.js | React | React-Native | Flutter | Vue.js | Vite |
 
 ### Backend
+| <img src="" width=75px></img> | <img src="" width=75px></img> | <img src="" width=75px></img> | <img src="" width=75px></img> | <img src="" width=75px></img> | <img src="" width=75px></img> |
+| ----- | ----- | --- | ------- | -------- | ------- |
 | MySQL | OAuth | AWS | Postman | ERDCloud | Swagger |
 
 ### Design
+| <img src="" width=75px></img> | <img src="" width=75px></img> | <img src="" width=75px></img> |
+| ----- | -------- | ------- |
 | Figma | Photosop | Premire |
 
 ### Others
+| <img src="" width=75px></img> | <img src="" width=75px></img> |
+| ------ | ------ |
 | Notion | Github |
