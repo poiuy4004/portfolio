@@ -12,11 +12,6 @@ const Container = styled.section`
   justify-content: space-between;
   background: center no-repeat url("https://png.pngtree.com/thumb_back/fh260/background/20230316/pngtree-heaven-gate-ladder-background-image_1948845.jpg");
   background-color: gray;
-  &>span{position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;}
-  &>span>img{margin: 80px 30px 20px; height: 390px; width: 390px;}
-  &>span>button{padding: 10px 20px; font-size: 30px; font-weight: 700; background-color: white; border: none; border-radius: 10px;  cursor: pointer;}
-  &>span>button:hover{background-color: ivory; color: gray; border: none; border-radius: 10px;}
-  &>span>button:active{background-color: gray; color: white; border: none; border-radius: 10px;}
   & a{color: white;}
   @media (max-height: 888px),(max-width: 1280px) {
     height: 100%; width: 100%;
@@ -71,6 +66,32 @@ const Footer = styled.div`
   &>*>div{font-size: x-small;}
 `
 
+const QRBox = styled.span`
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+  padding: 7rem 0 0;
+  &>img{
+    height: 390px;
+    width: 390px;
+  }
+  &>button{
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: 700;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  &>button:hover{background-color: ivory; color: gray; border: none; border-radius: 10px;}
+  &>button:active{background-color: gray; color: white; border: none; border-radius: 10px;}
+`
+
 function KakaoTalk({setIsModalOpen}){
   const [isQROpen,setIsQROpen] = useState(false);
   return(
@@ -105,10 +126,10 @@ function KakaoTalk({setIsModalOpen}){
         </Footer>
       </div>
       {isQROpen?
-        <span>
+        <QRBox>
           <img src={kakaoQRPng} />
           <button onClick={()=>setIsQROpen(false)}>QR 닫기</button>
-        </span>
+        </QRBox>
       : null}
     </Container>
   )

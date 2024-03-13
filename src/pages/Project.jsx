@@ -87,9 +87,7 @@ const DetailDescription = styled.div`
   font-size: 1.2rem;
   font-weight: 700;
   @media (max-height: 888px),(max-width: 1280px) {
-    font-size: .9rem;
-    line-height: 1rem;
-    margin-bottom: 1rem;
+    display: none;
   }
 `
 const MyTask = styled.div`

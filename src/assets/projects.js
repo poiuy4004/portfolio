@@ -46,7 +46,7 @@ const projects = [
     demo: "개발중인 사이트 입니다."
   },
   {
-    title: "Gem** ******",
+    title: "Gem** ****** (제작중)",
     mainImg: gemPng,
     description: `개발자들을 위한 커뮤니티 Gem** ******`,
     detailDescription: "블로그 기능과, 질문답변 커뮤니티까지\n한 곳에 모아놓은 개발자들의 지상낙원",
@@ -125,16 +125,6 @@ const projects = [
     myTask: "솔로 프로젝트 (1인 개발)",
     github: "https://github.com/poiuy4004/goldencity",
     demo: "https://poiuy4004.github.io/goldencity/"
-  },
-  {
-    title: "New Project",
-    mainImg: "https://gongu.copyright.or.kr/gongu/wrt/cmmn/wrtFileImageView.do?wrtSn=13212923&filePath=L2Rpc2sxL25ld2RhdGEvMjAxOS8yMS9DTFMxMDAwNC8xMzIxMjkyM19XUlQyMDE5MTAwOF8x&thumbAt=Y&thumbSe=b_tbumb&wrtTy=10004",
-    description: "세상에 유익한, 기분좋은 한 걸음을\n다시 한 번 걸어나가고 있습니다.",
-    detailDescription: "새로운 프로젝트에 대한 정보를 공개할 순 없지만,\n계속하여 프로젝트를 진행중입니다.",
-    stack: ["많은","기대","관심","부탁드립니다."],
-    myTask: "작업중입니다.",
-    github: "https://gongu.copyright.or.kr/gongu/wrt/cmmn/wrtFileImageView.do?wrtSn=13212923&filePath=L2Rpc2sxL25ld2RhdGEvMjAxOS8yMS9DTFMxMDAwNC8xMzIxMjkyM19XUlQyMDE5MTAwOF8x&thumbAt=Y&thumbSe=b_tbumb&wrtTy=10004",
-    demo: "https://gongu.copyright.or.kr/gongu/wrt/cmmn/wrtFileImageView.do?wrtSn=13212923&filePath=L2Rpc2sxL25ld2RhdGEvMjAxOS8yMS9DTFMxMDAwNC8xMzIxMjkyM19XUlQyMDE5MTAwOF8x&thumbAt=Y&thumbSe=b_tbumb&wrtTy=10004"
   },
 ]
 export default projects;

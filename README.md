@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# 장용민
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+FE Dev JangYongMin.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Portfolio
 
-### `npm start`
+포트폴리오를 보고싶으신 분들께서는 아래 바로가기 링크로 접속해주시기 바랍니다.<br />
+[포트폴리오 바로가기](https://poiuy4004.github.io/portfolio/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+구 버전 포트폴리오를 보고싶은 분들께서는 아래 바로가기 링크로 접속해주시기 바랍니다.<br />
+[(구)포트폴리오 바로가기](https://poiuy4004.github.io/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
+| <img src="https://seeklogo.com/images/N/next-js-logo-7929BCD36F-seeklogo.com.png" width=75px /> | <img src="https://seeklogo.com/images/R/react-logo-7B3CE81517-seeklogo.com.png" width=75px /> | <img src="https://seeklogo.com/images/R/react-native-logo-221C671C70-seeklogo.com.png" width=75px /> | <img src="https://seeklogo.com/images/F/flutter-logo-5086DD11C5-seeklogo.com.png" width=75px /> | <img src="https://seeklogo.com/images/V/vuejs-logo-17D586B587-seeklogo.com.png" width=75px /> | <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg" width=75px /> |
+| ------- | ----- | ------------ | ------- | ------ | ---- |
+| Next.js | React | React-Native | Flutter | Vue.js | Vite |
 
-### `npm run build`
+### Backend
+| <img src="https://seeklogo.com/images/M/mysql-logo-B047FB7790-seeklogo.com.png" width=75px /> | <img src="https://seeklogo.com/images/O/oauth-logo-D9869ED13F-seeklogo.com.png" width=75px /> | <img src="https://seeklogo.com/images/A/amazon-web-services-aws-logo-6C2E3DCD3E-seeklogo.com.png" width=75px /> | <img src="https://seeklogo.com/images/P/postman-logo-0087CA0D15-seeklogo.com.png" width=75px /> | <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FunW26%2FbtrPSZYKyc6%2FBCKH21EKO8ms93kUHFK7I0%2Fimg.png" width=75px /> | <img src="https://cdn.svgporn.com/logos/swagger.svg" width=75px /> |
+| ----- | ----- | --- | ------- | -------- | ------- |
+| MySQL | OAuth | AWS | Postman | ERDCloud | Swagger |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Design
+| <img src="https://seeklogo.com/images/F/figma-logo-E4E21D3AEA-seeklogo.com.png" width=75px /> | <img src="https://seeklogo.com/images/A/adobe-photoshop-logo-7B88D7B5AA-seeklogo.com.png" width=75px /> | <img src="https://seeklogo.com/images/A/adobe-premiere-logo-0B31ECF881-seeklogo.com.png" width=75px /> |
+| ----- | -------- | ------- |
+| Figma | Photosop | Premire |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Others
+| <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" width=75px /> | <img src="https://seeklogo.com/images/N/notion-app-logo-009B1538E8-seeklogo.com.png" width=75px /> |
+| ------ | ------ |
+| Github | Notion |
