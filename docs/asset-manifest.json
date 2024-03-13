@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.e64a3843.css",
-    "main.js": "/portfolio/static/js/main.fb96cf51.js",
+    "main.js": "/portfolio/static/js/main.57bfb4b3.js",
     "static/media/나눔손글씨 곰신체.ttf": "/portfolio/static/media/나눔손글씨 곰신체.f281f600c34facc78579.ttf",
     "static/media/나눔손글씨 암스테르담.ttf": "/portfolio/static/media/나눔손글씨 암스테르담.83056686f872b3fd07eb.ttf",
     "static/media/나눔손글씨 성실체.ttf": "/portfolio/static/media/나눔손글씨 성실체.2b74074bed920937ac2b.ttf",
@@ -13,6 +13,7 @@
     "static/media/SCDream5.otf": "/portfolio/static/media/SCDream5.ae5ee4933db75a3ccb04.otf",
     "static/media/SUIT-Medium.ttf": "/portfolio/static/media/SUIT-Medium.df0552f549d0c62d51fd.ttf",
     "static/media/drMain.png": "/portfolio/static/media/drMain.238484e9bf6b6f415ab7.png",
+    "static/media/theFirstEdu.png": "/portfolio/static/media/theFirstEdu.045d7f84336962bf396f.png",
     "static/media/FuturaPTExtraBold.otf": "/portfolio/static/media/FuturaPTExtraBold.b0a404e778ba6bde9d55.otf",
     "static/media/FuturaPTMedium.otf": "/portfolio/static/media/FuturaPTMedium.7af6976ce738bec1704e.otf",
     "static/media/kakaoQR.png": "/portfolio/static/media/kakaoQR.be0a0c5e1acfde5f7a0e.png",
@@ -23,10 +24,10 @@
     "static/media/ArrowTop.svg": "/portfolio/static/media/ArrowTop.42a883a405c46749b7a0e3a98f71d0ce.svg",
     "static/media/Circle.svg": "/portfolio/static/media/Circle.94331aef7f9df6ba3502d57f54f3feb0.svg",
     "main.e64a3843.css.map": "/portfolio/static/css/main.e64a3843.css.map",
-    "main.fb96cf51.js.map": "/portfolio/static/js/main.fb96cf51.js.map"
+    "main.57bfb4b3.js.map": "/portfolio/static/js/main.57bfb4b3.js.map"
   },
   "entrypoints": [
     "static/css/main.e64a3843.css",
-    "static/js/main.fb96cf51.js"
+    "static/js/main.57bfb4b3.js"
   ]
 }

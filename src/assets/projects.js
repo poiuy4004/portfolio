@@ -1,10 +1,22 @@
-import drMain from "./drMain.png"
-import gemPng from "./gemMain.png"
-import nutritionCodersMainPng from "./nutritionCodersMain.png"
-import stackOverflowPng from "./stackOverflowMain.png"
-import goldenCityPng from "./goldenCityMain.png"
+import theFirstEduPng from "./theFirstEdu.png";
+import drMain from "./drMain.png";
+import gemPng from "./gemMain.png";
+import nutritionCodersMainPng from "./nutritionCodersMain.png";
+import stackOverflowPng from "./stackOverflowMain.png";
+import goldenCityPng from "./goldenCityMain.png";
 
 const projects = [
+  {
+    title: "더퍼스트에듀",
+    mainImg: theFirstEduPng,
+    description: `더 나은 세상을 만드는 더퍼스트에듀`,
+    detailDescription: "다른 우리가 함께 살 수 있는 방법\n그것은 바로 교육입니다.",
+    stack: ["React", "AWS", "Zustand", "Axios", "Styled-components",],
+    myTask:
+`1인 개발`,
+    github: "코드 비공개 입니다.",
+    demo: "개발중인 사이트 입니다."
+  },
   {
     title: "Dr ***",
     mainImg: drMain,
@@ -29,8 +41,7 @@ const projects = [
 5. 상태관리
 - Redux를 통한 상태관리 진행
 - store 폴더로 상태관리 페이지 통합
-6. index.html 관리
-`,
+6. index.html 관리`,
     github: "코드 비공개 입니다.",
     demo: "개발중인 사이트 입니다."
   },
@@ -53,8 +64,7 @@ const projects = [
 4. 상태관리
 - Zustand를 통한 상태관리 진행
 - store 폴더로 상태관리 페이지 통합
-5. index.html 관리
-`,
+5. index.html 관리`,
     github: "코드 비공개 입니다.",
     demo: "개발중인 사이트 입니다."
   },
@@ -81,8 +91,7 @@ const projects = [
 5. 상태관리
 - Zustand를 통한 상태관리 진행
 - store 폴더로 상태관리 페이지 통합
-6. index.html 관리
-`,
+6. index.html 관리`,
     github: "https://github.com/codestates-seb/seb45_main_002",
     demo: "http://nutrients-coders.com"
   },
