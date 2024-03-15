@@ -1,6 +1,7 @@
-
 import { useState } from "react";
 import styled from "styled-components";
+import ProfileImg from "../assets/profile.jpg";
+import ProfileBackImg from "../assets/profileBack.jpg";
 import kakaoQRPng from "../assets/kakaoQR.png";
 
 const Container = styled.section`
@@ -10,7 +11,10 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: center no-repeat url("https://png.pngtree.com/thumb_back/fh260/background/20230316/pngtree-heaven-gate-ladder-background-image_1948845.jpg");
+  background-image: url(${ProfileBackImg});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-color: gray;
   & a{color: white;}
   @media (max-height: 888px),(max-width: 1280px) {
@@ -107,7 +111,7 @@ function KakaoTalk({setIsModalOpen}){
       </Header>
       <div>
         <Profile>
-          <img src="https://www.urbanbrush.net/web/wp-content/uploads/edd/2022/12/urbanbrush-20221214144619159434.jpg" />
+          <img src={ProfileImg} />
           <div>장용민</div>
         </Profile>
         <Footer>
